@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-classificacao-risco',
   templateUrl: './classificacao-risco.component.html',
   styleUrls: ['./classificacao-risco.component.scss'],
+
 })
+
 export class ClassificacaoRiscoComponent implements OnInit {
 
   mostraPacoteMedidas = false;
@@ -23,38 +24,38 @@ export class ClassificacaoRiscoComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  mostrarPacoteMedidas() {
+  mostrarPacoteMedidas(): void {
     this.mostraPacoteMedidas = !this.mostraPacoteMedidas;
   }
 
-  mostraEscalaGlasgow() {
+  mostraEscalaGlasgow(): void {
     this.glasgow = !this.glasgow;
   }
 
-  mostraEmergencia() {
+  mostraEmergencia(): void {
     this.emergencia = !this.emergencia;
   }
 
-  outras() {
+  outras(): void {
     this.outrasDoencas = !this.outrasDoencas;
   }
 
-  medicamentoEmUso() {
+  medicamentoEmUso(): void {
     this.medUso = !this.medUso;
   }
-  medAlergia() {
+  medAlergia(): void {
     this.alergia = !this.alergia;
   }
-  azul() {
+  azul(): void {
     this.azulSelect = !this.azulSelect;
   }
-  amarelo() {
+  amarelo(): void {
     this.amareloSelect = !this.amareloSelect;
   }
-  verde() {
+  verde(): void {
     this.verdeSelect = !this.verdeSelect;
   }
-  vermelha() {
+  vermelha(): void {
     this.vermelhoSelect = !this.vermelhoSelect;
   }
 }

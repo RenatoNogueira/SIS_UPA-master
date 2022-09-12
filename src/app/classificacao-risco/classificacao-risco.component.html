@@ -399,11 +399,13 @@
 <section>
   <b>Outras Informações:</b>
   <hr _ngcontent-c19="" />
-  <form clrForm clrLayout="vertical">
-    <div class="form-group">
-      <textarea id="formFields_8" cols="110" rows="5" placeholder="Informações Importantes"></textarea>
-    </div>
+  <form clrForm>
+    <clr-textarea-container *ngIf="medUso">
+      <label></label>
+      <textarea clrTextarea name="description" rows="5" style="width: 74%" placeholder="Outras Informações"></textarea>
+    </clr-textarea-container>
   </form>
+
 
   <br /><br />
 
