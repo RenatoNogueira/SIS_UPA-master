@@ -1,0 +1,175 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Protocolo</th>
+      <th>Nome do Paciente</th>
+      <th>Especialidade</th>
+      <th>Classi. de Risco</th>
+      <th>Situação</th>
+      <th>Tempo</th>
+      <th>Ação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>402208150003</td>
+      <td>ALICIA MANOELE SOUSA DE AQUINO</td>
+      <td>Clínica Médica</td>
+      <td><label _ngcontent-c13="" style="
+              display: block;
+              width: 100px;
+              height: 30px;
+              padding: 10px;
+              margin: auto auto;
+              color: rgb(2, 2, 2);
+              text-align: center;
+              font-weight: bold;
+              background: #FFFF00">
+          Amarelo
+        </label></td>
+      <td>Suspeita de Sepse</td>
+      <td>1h 2min</td>
+      <td>
+        <button class="btn btn-link">
+          <clr-icon shape="pencil" class="is-solid"></clr-icon>
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>402208150001</td>
+      <td>RICARDO SÉRGIO ARAÚJO LIMA</td>
+      <td>Clínica Médica</td>
+      <td><label _ngcontent-c13="" style="
+              display: block;
+              width: 100px;
+              height: 30px;
+              padding: 10px;
+              margin: auto auto;
+              color: #fff;
+              text-align: center;
+              font-weight: bold" class="blueBg">
+          Azul
+        </label></td>
+      <td>Suspeita de Sepse</td>
+      <td>2h 2min</td>
+      <td>
+        <button class="btn btn-link" (click)="basic = true">
+          <clr-icon shape="pencil" class="is-solid"></clr-icon>
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>402208150002</td>
+      <td>JÉSSICA COSTA MENDES</td>
+      <td>Clínica Médica</td>
+      <td><label _ngcontent-c13="" style="
+              display: block;
+              width: 100px;
+              height: 30px;
+              padding: 10px;
+              margin: auto auto;
+              color: #fff;
+              text-align: center;
+              font-weight: bold" class="greenBg">
+          Verde
+        </label></td>
+      <td>Suspeita de Sepse</td>
+      <td>2h 2min</td>
+      <td>
+        <button class="btn btn-link" (click)="reavaliacao= true">
+          <clr-icon shape="pencil" class="is-solid"></clr-icon>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- MODAL -->
+<clr-modal [(clrModalOpen)]="basic">
+  <h3 class="modal-title">Chamada de Paciente</h3>
+  <div class="modal-body" routerLinkActive="active">
+    <div class="" style="margin-top: 1.5em">
+      <div class="row" style="padding-bottom: 1em">
+        <div class="col-xs-12 ng-star-inserted" style="padding-bottom: 1em">
+        </div>
+        <div class="col-xs-6">
+          <label for=""><b> Nome: </b></label>
+          <span>RICARDO SÉRGIO ARAÚJO LIMA</span>
+        </div>
+        <div class="col-xs-6">
+          <label for=""> <b> Especialidade: </b> </label>
+          <span>Clínica Médica</span>
+        </div>
+      </div>
+      <div class="row" style="padding-bottom: 1em">
+        <div class="col-xs-6">
+          <label for=""><b> Protocolo: </b> </label>
+          <span>402208150001</span>
+        </div>
+        <div class="col-xs-6">
+          <label for=""><b> Tempo em espera: </b> </label>
+          <span>4h 32min</span>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 2em; padding-left: 20px;">
+      <div class="btn-group" routerLinkActive="active">
+        <a routerLinkActive="active" routerLink="/detalhes-medico">
+          <button class="btn btn-primary ng-star-inserted" tabindex="0">Atender</button>
+        </a>
+        <button class="btn btn-danger-outline ng-star-inserted" (click)="basic = false" style="margin-left: 10px;">
+          Sair
+        </button>
+      </div>
+    </div>
+  </div>
+  <!--<div class="modal-footer">
+      <div class="btn-group">
+          <button class="btn btn-primary" (click)="basic = false">Atender</button>
+          <button class="btn btn-danger-outline" (click)="basic = false">Cancelar</button>
+      </div>
+       <button type="button" class="btn btn-outline" (click)="basic = false">Cancel</button>
+      <button type="button" class="btn btn-primary" (click)="basic = false">Ok</button>
+  </div>-->
+</clr-modal>
+
+<!-- MODAL -->
+<clr-modal [(clrModalOpen)]="reavaliacao">
+  <h3 class="modal-title">Reavaliação</h3>
+  <div class="modal-body" routerLinkActive="active">
+    <div class="" style="margin-top: 1.5em">
+      <div class="row" style="padding-bottom: 1em">
+        <div class="col-xs-12 ng-star-inserted" style="padding-bottom: 1em">
+        </div>
+        <div class="col-xs-6">
+          <label for=""><b> Nome: </b></label>
+          <span>JÉSSICA COSTA MENDES</span>
+        </div>
+        <div class="col-xs-6">
+          <label for=""> <b> Especialidade: </b> </label>
+          <span>Clínica Médica</span>
+        </div>
+      </div>
+      <div class="row" style="padding-bottom: 1em">
+        <div class="col-xs-6">
+          <label for=""><b> Protocolo: </b> </label>
+          <span>402208150001</span>
+        </div>
+        <div class="col-xs-6">
+          <label for=""><b> Tempo em espera: </b> </label>
+          <span>4h 32min</span>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 2em">
+        <div class="btn-group" routerLinkActive="active">
+          <a routerLinkActive="active" routerLink="/reavaliacao">
+            <button class="btn btn-primary ng-star-inserted" tabindex="0">Atender</button>
+          </a>
+          <button class="btn btn-danger-outline ng-star-inserted" (click)="reavaliacao = false">
+            Sair
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</clr-modal>

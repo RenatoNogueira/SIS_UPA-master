@@ -1,0 +1,58 @@
+<div class="main-container">
+  <div class="content-container">
+    <clr-vertical-nav [clrVerticalNavCollapsible]="true">
+      <a clrVerticalNavLink routerLinkActive="active" routerLink="./credit">
+        <clr-icon shape="home" clrVerticalNavIcon></clr-icon>
+        Início
+      </a>
+      <a clrVerticalNavLink routerLinkActive="active" routerLink="./classificacao-risco">
+        <clr-icon shape="thermometer" clrVerticalNavIcon></clr-icon>
+        Classificação de Risco
+      </a>
+      <clr-vertical-nav-group routerLinkActive="active">
+        <clr-icon shape="clipboard" clrVerticalNavIcon></clr-icon>
+        Recepção
+        <clr-vertical-nav-group-children>
+          <a clrVerticalNavLink routerLink="./fire/charmander" routerLinkActive="active">
+            Lista da recepção
+          </a>
+        </clr-vertical-nav-group-children>
+      </clr-vertical-nav-group>
+      <clr-vertical-nav-group routerLinkActive="active">
+        <clr-icon shape="first-aid" clrVerticalNavIcon></clr-icon>
+        Enfermagem
+        <clr-vertical-nav-group-children>
+          <a clrVerticalNavLink routerLink="./electric/pikachu" routerLinkActive="active">
+            Medicação e Procedimentos
+          </a>
+          <a clrVerticalNavLink routerLink="./electric/raichu" routerLinkActive="active">
+            Ala de Observação
+          </a>
+        </clr-vertical-nav-group-children>
+      </clr-vertical-nav-group>
+      <clr-vertical-nav-group routerLinkActive="active">
+        <clr-icon shape="employee" clrVerticalNavIcon></clr-icon>
+        Médico
+        <clr-vertical-nav-group-children>
+          <a clrVerticalNavLink routerLink="#" routerLinkActive="active">
+            Lista para Atendimento
+          </a>
+          <a clrVerticalNavLink routerLink="./listagem-pacientes-retorno" routerLinkActive="active">
+            Lista de Retorno
+          </a>
+          <a clrVerticalNavLink routerLink="./pacientes-atendimento" routerLinkActive="active">
+            Suspeita de Sepse
+          </a>
+          <a clrVerticalNavLink routerLink="./electric/raichu" routerLinkActive="active">
+            Ala de Observação
+          </a>
+        </clr-vertical-nav-group-children>
+      </clr-vertical-nav-group>
+    </clr-vertical-nav>
+  </div>
+  <section _ngcontent-c4="" _nghost-c8=""><div _ngcontent-c8="" id="versao-sistema">
+    Versão:  4.14.1
+  </div>
+  </section>
+</div>
+
