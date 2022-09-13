@@ -96,7 +96,6 @@
   <!-- topo | direita | inferior | esquerda */-->
   <form clrForm clrLayout="vertical" style="margin: 0 6em 0 0;">
     <form class="clr-control-inline">
-
       <clr-checkbox-container style="margin-right: 10%;">
         <clr-checkbox-wrapper>
           <input type="checkbox" clrCheckbox name="options1" required value="option1" (click)="Ceftriaxona()" />
@@ -113,13 +112,13 @@
       </clr-checkbox-container>
       <clr-checkbox-container>
         <clr-checkbox-wrapper>
-          <input type="checkbox" clrCheckbox name="options1" required value="option1" (click)="Metronidazol ()"/>
+          <input type="checkbox" clrCheckbox name="options1" required value="option1" (click)="Metronidazol ()" />
           <label>Metronidazol 500mg/ml
             <app-prescriacao-antibiotico *ngIf="metronidazol"></app-prescriacao-antibiotico>
           </label>
         </clr-checkbox-wrapper>
         <clr-checkbox-wrapper>
-          <input type="checkbox" clrCheckbox name="options2" required value="option2" (click)="Piperacilina()"/>
+          <input type="checkbox" clrCheckbox name="options2" required value="option2" (click)="Piperacilina()" />
           <label>Piperacilina + Tazobactam 4,5g
             <app-prescriacao-antibiotico *ngIf="piperacilina"></app-prescriacao-antibiotico>
           </label>
@@ -214,20 +213,3 @@
   </form>
 </form>
 <br>
-
-
-
-
-
-<!--
-<clr-modal [(clrModalOpen)]="ceftriaxona">
-  <h3 class="modal-title">I have a nice title</h3>
-  <div class="modal-body">
-      <p>But not much to say...</p>
-  </div>
-  <div class="modal-footer">
-      <button type="button" class="btn btn-outline" (click)="ceftriaxona = false">Cancel</button>
-      <button type="button" class="btn btn-primary" (click)="ceftriaxona = false">Ok</button>
-  </div>
-</clr-modal>
- -->
