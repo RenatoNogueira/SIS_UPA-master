@@ -1,6 +1,5 @@
-  <b _ngcontent-c19="">Pacote de Medidas</b>
-  <hr _ngcontent-c19="">
-
+<b _ngcontent-c19="">Pacote de Medidas</b>
+<hr _ngcontent-c19="">
 
 <label>Exames do Kit Sepse</label>
 <clr-checkbox-wrapper>
@@ -88,6 +87,8 @@
   <button class="btn btn-primary">Imprimir</button>
 </form>
 <br>
+
+
 <label>Prescrição de Antibiótico</label>
 <br>
 <form style="margin-left: 9%">
@@ -95,29 +96,40 @@
   <!-- topo | direita | inferior | esquerda */-->
   <form clrForm clrLayout="vertical" style="margin: 0 6em 0 0;">
     <form class="clr-control-inline">
+
       <clr-checkbox-container style="margin-right: 10%;">
         <clr-checkbox-wrapper>
-          <input type="checkbox" clrCheckbox name="options1" required value="option1" />
-          <label>Ceftriaxona 1g</label>
+          <input type="checkbox" clrCheckbox name="options1" required value="option1" (click)="Ceftriaxona()" />
+          <label>Ceftriaxona 1g
+            <app-prescriacao-antibiotico *ngIf="ceftriaxona"></app-prescriacao-antibiotico>
+          </label>
         </clr-checkbox-wrapper>
         <clr-checkbox-wrapper>
-          <input type="checkbox" clrCheckbox name="options2" required value="option2" />
-          <label>Ciprofloxacino 200 mg/ml</label>
+          <input type="checkbox" clrCheckbox name="options2" required value="option2" (click)="Ciprofloxacino()" />
+          <label>Ciprofloxacino 200mg/ml
+            <app-prescriacao-antibiotico *ngIf="ciprofloxacino"></app-prescriacao-antibiotico>
+          </label>
         </clr-checkbox-wrapper>
       </clr-checkbox-container>
       <clr-checkbox-container>
         <clr-checkbox-wrapper>
-          <input type="checkbox" clrCheckbox name="options1" required value="option1" />
-          <label>Metronidazol 500 mg/ml</label>
+          <input type="checkbox" clrCheckbox name="options1" required value="option1" (click)="Metronidazol ()"/>
+          <label>Metronidazol 500mg/ml
+            <app-prescriacao-antibiotico *ngIf="metronidazol"></app-prescriacao-antibiotico>
+          </label>
         </clr-checkbox-wrapper>
         <clr-checkbox-wrapper>
-          <input type="checkbox" clrCheckbox name="options2" required value="option2" />
-          <label>Piperacilina + Tazobactam 4,5g</label>
+          <input type="checkbox" clrCheckbox name="options2" required value="option2" (click)="Piperacilina()"/>
+          <label>Piperacilina + Tazobactam 4,5g
+            <app-prescriacao-antibiotico *ngIf="piperacilina"></app-prescriacao-antibiotico>
+          </label>
         </clr-checkbox-wrapper>
       </clr-checkbox-container>
     </form>
     <br>
   </form>
+
+
   <label><u>Foco Partes Moles</u></label>
   <!-- topo | direita | inferior | esquerda */-->
   <form clrForm clrLayout="vertical" style="margin: 0 0.6em 0 0;">
@@ -129,13 +141,13 @@
         </clr-checkbox-wrapper>
         <clr-checkbox-wrapper>
           <input type="checkbox" clrCheckbox name="options2" required value="option2" />
-          <label>Clindimicina 600 mg</label>
+          <label>Clindimicina 600mg</label>
         </clr-checkbox-wrapper>
       </clr-checkbox-container>
       <clr-checkbox-container>
         <clr-checkbox-wrapper>
           <input type="checkbox" clrCheckbox name="options1" required value="option1" />
-          <label>Metronidazol 500 mg/ml</label>
+          <label>Metronidazol 500mg/ml</label>
         </clr-checkbox-wrapper>
         <clr-checkbox-wrapper>
           <input type="checkbox" clrCheckbox name="options2" required value="option2" />
@@ -156,13 +168,13 @@
         </clr-checkbox-wrapper>
         <clr-checkbox-wrapper>
           <input type="checkbox" clrCheckbox name="options2" required value="option2" />
-          <label>Claritromicina 250 mg</label>
+          <label>Claritromicina 250mg</label>
         </clr-checkbox-wrapper>
       </clr-checkbox-container>
       <clr-checkbox-container>
         <clr-checkbox-wrapper>
           <input type="checkbox" clrCheckbox name="options1" required value="option1" />
-          <label>Clindamicina 600 mg</label>
+          <label>Clindamicina 600mg</label>
         </clr-checkbox-wrapper>
         <clr-checkbox-wrapper>
           <input type="checkbox" clrCheckbox name="options1" required value="option1" />
@@ -183,13 +195,13 @@
         </clr-checkbox-wrapper>
         <clr-checkbox-wrapper>
           <input type="checkbox" clrCheckbox name="options2" required value="option2" />
-          <label>Ciprofloxacino 200 mg/ml</label>
+          <label>Ciprofloxacino 200mg/ml</label>
         </clr-checkbox-wrapper>
       </clr-checkbox-container>
       <clr-checkbox-container>
         <clr-checkbox-wrapper>
           <input type="checkbox" clrCheckbox name="options1" required value="option1" />
-          <label>Gentamicina 40 mg/ml</label>
+          <label>Gentamicina 40mg/ml</label>
         </clr-checkbox-wrapper>
         <clr-checkbox-wrapper>
           <input type="checkbox" clrCheckbox name="options1" required value="option1" />

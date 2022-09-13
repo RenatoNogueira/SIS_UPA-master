@@ -22,6 +22,7 @@ import { PacoteMedidasComponent } from './pacote-medidas/pacote-medidas.componen
 import { ReavaliacaoComponent } from './reavaliacao/reavaliacao.component';
 import { CabecalhoVerdeComponent } from './cabecalho-verde/cabecalho-verde.component';
 import { AvaliacaoMedicaComponent } from './avaliacao-medica/avaliacao-medica.component';
+import { PrescriacaoAntibioticoComponent } from './pacote-medidas/prescriacao-antibiotico/prescriacao-antibiotico.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { AvaliacaoMedicaComponent } from './avaliacao-medica/avaliacao-medica.co
     PacoteMedidasComponent,
     ReavaliacaoComponent,
     CabecalhoVerdeComponent,
-    AvaliacaoMedicaComponent
+    AvaliacaoMedicaComponent,
+    PrescriacaoAntibioticoComponent
   ],
   imports: [
     BrowserModule,
