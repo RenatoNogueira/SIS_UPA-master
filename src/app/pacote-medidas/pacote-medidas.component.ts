@@ -11,10 +11,9 @@ export class PacoteMedidasComponent implements OnInit {
   ciprofloxacino = false;
   metronidazol = false;
   piperacilina = false;
-
   constructor() {}
   ngOnInit(): void {
-    imports: [FormsModule];
+    imports: [FormsModule,];
   }
 
   Ceftriaxona(): void {

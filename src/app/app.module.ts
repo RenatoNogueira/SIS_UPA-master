@@ -23,6 +23,7 @@ import { ReavaliacaoComponent } from './reavaliacao/reavaliacao.component';
 import { CabecalhoVerdeComponent } from './cabecalho-verde/cabecalho-verde.component';
 import { AvaliacaoMedicaComponent } from './avaliacao-medica/avaliacao-medica.component';
 import { PrescriacaoAntibioticoComponent } from './pacote-medidas/prescriacao-antibiotico/prescriacao-antibiotico.component';
+;
 
 @NgModule({
   declarations: [
