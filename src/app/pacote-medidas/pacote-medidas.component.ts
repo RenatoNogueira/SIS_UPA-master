@@ -32,3 +32,4 @@ export class PacoteMedidasComponent implements OnInit {
     this.piperacilina = !this.piperacilina;
   }
 }
+
