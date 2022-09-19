@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { ClarityModule } from "@clr/angular";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ClarityModule } from '@clr/angular';
 import { ClassificacaoRiscoComponent } from './classificacao-risco/classificacao-risco.component';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -23,8 +23,6 @@ import { ReavaliacaoComponent } from './reavaliacao/reavaliacao.component';
 import { CabecalhoVerdeComponent } from './cabecalho-verde/cabecalho-verde.component';
 import { AvaliacaoMedicaComponent } from './avaliacao-medica/avaliacao-medica.component';
 import { PrescriacaoAntibioticoComponent } from './pacote-medidas/prescriacao-antibiotico/prescriacao-antibiotico.component';
-;
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +43,7 @@ import { PrescriacaoAntibioticoComponent } from './pacote-medidas/prescriacao-an
     ReavaliacaoComponent,
     CabecalhoVerdeComponent,
     AvaliacaoMedicaComponent,
-    PrescriacaoAntibioticoComponent
+    PrescriacaoAntibioticoComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +52,6 @@ import { PrescriacaoAntibioticoComponent } from './pacote-medidas/prescriacao-an
     ClarityModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
