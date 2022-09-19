@@ -13,7 +13,7 @@ export class PacoteMedidasComponent implements OnInit {
   piperacilina = false;
   constructor() {}
   ngOnInit(): void {
-    imports: [FormsModule,];
+    imports: [FormsModule];
   }
 
   Ceftriaxona(): void {
@@ -25,11 +25,10 @@ export class PacoteMedidasComponent implements OnInit {
   }
 
   Metronidazol(): void {
-    this.metronidazol  = !this.metronidazol;
+    this.metronidazol = !this.metronidazol;
   }
 
   Piperacilina(): void {
     this.piperacilina = !this.piperacilina;
   }
 }
-
