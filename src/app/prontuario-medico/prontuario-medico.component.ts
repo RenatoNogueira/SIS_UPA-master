@@ -3,17 +3,17 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-prontuario-medico',
   templateUrl: './prontuario-medico.component.html',
-  styleUrls: ['./prontuario-medico.component.scss']
+  styleUrls: ['./prontuario-medico.component.scss'],
 })
 export class ProntuarioMedicoComponent implements OnInit {
   mostraPacoteMedidas = false;
   mostraAvaliacao = false;
   mostrarAvaliacaoMedica = false;
   reavalicao = false;
-  constructor() { }
+  hAtendimento = false;
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   mostrarPacoteMedidas() {
     this.mostraPacoteMedidas = !this.mostraPacoteMedidas;
@@ -25,5 +25,9 @@ export class ProntuarioMedicoComponent implements OnInit {
 
   mostraReavaliacao() {
     this.reavalicao = !this.reavalicao;
+  }
+
+  exibir() {
+    this.hAtendimento = !this.hAtendimento;
   }
 }

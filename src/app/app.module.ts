@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { NgSelectModule } from '@ng-select/ng-select';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,6 +24,11 @@ import { ReavaliacaoComponent } from './reavaliacao/reavaliacao.component';
 import { CabecalhoVerdeComponent } from './cabecalho-verde/cabecalho-verde.component';
 import { AvaliacaoMedicaComponent } from './avaliacao-medica/avaliacao-medica.component';
 import { PrescriacaoAntibioticoComponent } from './pacote-medidas/prescriacao-antibiotico/prescriacao-antibiotico.component';
+import { HistoricoAtendimentoComponent } from './prontuario-medico/historico-atendimento/historico-atendimento.component';
+import { ServicoSocialComponent } from './classificacao-risco/servico-social/servico-social.component';
+import { EnfermagemComponent } from './enfermagem/enfermagem.component';
+import { MedicacaoComponent } from './enfermagem/medicacao/medicacao.component';
+import { ExameComponent } from './enfermagem/exame/exame.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,8 +50,14 @@ import { PrescriacaoAntibioticoComponent } from './pacote-medidas/prescriacao-an
     CabecalhoVerdeComponent,
     AvaliacaoMedicaComponent,
     PrescriacaoAntibioticoComponent,
+    HistoricoAtendimentoComponent,
+    ServicoSocialComponent,
+    EnfermagemComponent,
+    MedicacaoComponent,
+    ExameComponent,
   ],
   imports: [
+    NgSelectModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

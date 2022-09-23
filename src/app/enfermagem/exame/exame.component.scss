@@ -1,0 +1,55 @@
+/* Tipo Pacientes aguardando exame */
+.tipo-E {
+  background: rgb(255, 0, 0);
+  border-radius: 5px;
+}
+
+.tipo-A {
+  background: rgb(3, 180, 112);
+  border-radius: 5px;
+}
+
+.tipo-M {
+  background: rgb(1, 179, 202);
+  border-radius: 5px;
+}
+
+.tipo-A,
+.tipo-E,
+.tipo-M {
+  font-size: .9em;
+  color: #fff;
+  font-weight: bolder;
+  padding: 6px;
+}
+
+/* Classificação de Risco */
+.class-risco-amarela {
+  background: #FFD639
+}
+
+.class-risco-azul {
+  background: #0175c2
+}
+
+.class-risco-verde {
+  background: #398d01
+}
+
+.class-risco-vermelha {
+  background: #be0202
+}
+
+.class-risco-amarela,
+.class-risco-azul,
+.class-risco-verde,
+.class-risco-vermelha {
+  display: block;
+  width: 100px;
+  height: 30px;
+  padding: 10px;
+  margin: auto auto;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
