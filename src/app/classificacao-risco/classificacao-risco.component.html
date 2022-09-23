@@ -234,14 +234,17 @@
         RespostaMotora }}</option>
     </select>
   </clr-select-container>
+
+
+  <section class="escala-glasgow">
+    <label class="p2">Escala de Coma Glasgow: 8/15</label>
+  </section>
+
 </form>
 
 <br>
 
-<section class="escala-glasgow">
-  <label></label>
-  <label class="p2">Escala de Coma Glasgow: /15</label>
-</section>
+
 <form>
   <section class="form-block p1" *ngIf="emergencia">
     <label class="p2">Sinais Vitais:</label>
@@ -311,6 +314,7 @@
 
   <section class="form-block p1" formGroupName="Avaliacao" *ngIf="emergencia">
     <div class="form-group">
+      <label></label>
       <label class="p1">Outros Dados:</label>
 
       <label class="p1" for="peso_aproximado">HGT</label>
@@ -324,16 +328,15 @@
         <small>Kg</small>
       </span>
     </div>
-  </section>
-  <section class="form-block" *ngIf="emergencia">
     <div class="form-group">
       <label></label>
-      <span class="label label-danger p1">
-        Risco Alto de Sepse -
-        <span class="badge p1">Valor: 9</span>
-      </span>
+      <label href="..." class="label label-info">
+        Risco Baixo de SEPSE - Valor:
+        <span class="badge">0</span>
+      </label>
     </div>
   </section>
+
 </form>
 
 <br>
