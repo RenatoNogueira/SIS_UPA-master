@@ -1,37 +1,87 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms';
 @Component({
   selector: 'app-classificacao-risco',
   templateUrl: './classificacao-risco.component.html',
   styleUrls: ['./classificacao-risco.component.scss'],
-
 })
-
 export class ClassificacaoRiscoComponent implements OnInit {
-
-  mostraPacoteMedidas = false;
-  mostraAvaliacao = false;
-  glasgow = false;
   emergencia = true;
   outrasDoencas = false;
-  medUso = true;
-  alergia = true;
-  azulSelect = false;
-  amareloSelect = false;
-  verdeSelect = false;
-  vermelhoSelect = false;
+  medUso = false;
+  alergia = false;
+  // campo Causa Extrena:*
+  CausaExtrema: string[] = [
+    'Acidente de Trabalho',
+    'Acidente de transporte por água',
+    'Acidente de Transporte Terrestre',
+    'Acidentes de transporte aéreo e espacial',
+    'Afogamento',
+    'Agressão física',
+    'Asfixia',
+    'Atropelamento',
+    'Choque eletrico',
+    'Contrato com animais e plantas venenosos',
+    'Envenenamento [intoxicação] acidental por e exposição à substâncias nocivas',
+    'Esmagamento',
+    'Exposição à fumaça, ao fogo e às chamas',
+    'Exposição às forças da natureza',
+    'Hipotermia',
+    'Intoxicação exógena',
+    'Intoxicação ou outra lesão/trauma de característica intencial',
+    'Lesão autoprovocada',
+    'Maus tratos',
+    'Mordeduras de animais',
+    'Não se aplica',
+    'Outros acidentes de transporte e os não especificados',
+    'Queda',
+    'Violência Sexual',
+  ];
+  causaExtrema: string = 'Acidente de Trabalho';
+
+  // Campos Escala de Glasgow
+  aberturaOcular: string[] = [
+    'Nenhuma',
+    'Pressão de abertura dos olhos',
+    'Ao comando verbal',
+    'Espontâneo',
+  ];
+  AberturaOcular: string = 'Nenhuma';
+  // ----------------------------------
+  respostaVerbal: string[] = [
+    'Nenhuma',
+    'Som',
+    'Palavras',
+    'Desorientado',
+    'Orientado e conversando',
+  ];
+  RespostaVerbal: string = 'Nenhuma';
+  // ----------------------------------
+  respostaMotora: string[] = [
+    'Nenhuma',
+    'Extenção',
+    'Flexão anormal',
+    'Flexão normal',
+    'Localiza dor',
+    'Ao comando',
+  ];
+  RespostaMotora: string = 'Nenhuma';
+
+  // Campo Nível de Conci~encia (Sinais Vitais: )
+  nivelConciencia: string[] = [
+    'Alerta',
+    'Resposta Verbal',
+    'Dor',
+    'Não Responsivel',
+    'Confuso',
+  ];
+  NivelConciencia: string = 'Alerta';
 
   constructor() {}
 
-  ngOnInit(): void {}
-
-  mostrarPacoteMedidas(): void {
-    this.mostraPacoteMedidas = !this.mostraPacoteMedidas;
+  ngOnInit(): void {
+    imports: [FormsModule, NgForm];
   }
-
-  mostraEscalaGlasgow(): void {
-    this.glasgow = !this.glasgow;
-  }
-
   mostraEmergencia(): void {
     this.emergencia = !this.emergencia;
   }
@@ -43,19 +93,17 @@ export class ClassificacaoRiscoComponent implements OnInit {
   medicamentoEmUso(): void {
     this.medUso = !this.medUso;
   }
+
   medAlergia(): void {
     this.alergia = !this.alergia;
   }
-  azul(): void {
-    this.azulSelect = !this.azulSelect;
-  }
-  amarelo(): void {
-    this.amareloSelect = !this.amareloSelect;
-  }
-  verde(): void {
-    this.verdeSelect = !this.verdeSelect;
-  }
-  vermelha(): void {
-    this.vermelhoSelect = !this.vermelhoSelect;
+  // Seleciona classificação de risco Emergência por padrão
+  checks = false;
+  emergenciaSelect(e: any) {
+    if (e.target.checked == true) {
+      this.checks = true;
+    } else {
+      this.checks = false;
+    }
   }
 }

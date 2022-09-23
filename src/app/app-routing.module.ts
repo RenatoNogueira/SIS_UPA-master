@@ -5,6 +5,10 @@ import { CabecalhoDetalheMedicoComponent } from './cabecalho-detalhe-medico/cabe
 import { CabecalhoVerdeComponent } from './cabecalho-verde/cabecalho-verde.component';
 import { ClassificacaoRiscoComponent } from './classificacao-risco/classificacao-risco.component';
 import { DetalhesMedicoComponent } from './detalhes-medico/detalhes-medico.component';
+import { EnfermagemComponent } from './enfermagem/enfermagem.component';
+import { ExameComponent } from './enfermagem/exame/exame.component';
+import { MedicacaoComponent } from './enfermagem/medicacao/medicacao.component';
+import { InicioComponent } from './inicio/inicio.component';
 import { ListaSuspeitaSepseComponent } from './lista-suspeita-sepse/lista-suspeita-sepse.component';
 import { ListagemPacientesRetornoComponent } from './listagem-pacientes-retorno/listagem-pacientes-retorno.component';
 import { PacientesAtendimentoComponent } from './pacientes-atendimento/pacientes-atendimento.component';
@@ -13,21 +17,31 @@ import { ProntuarioMedicoComponent } from './prontuario-medico/prontuario-medico
 import { ReavaliacaoComponent } from './reavaliacao/reavaliacao.component';
 
 const routes: Routes = [
+  { path: 'inicio', component: InicioComponent },
   { path: 'classificacao-risco', component: ClassificacaoRiscoComponent },
   { path: 'pacientes-atendimento', component: PacientesAtendimentoComponent },
   { path: 'lista-suspeita-sepse', component: ListaSuspeitaSepseComponent },
-  { path: 'listagem-pacientes-retorno', component: ListagemPacientesRetornoComponent },
+  {
+    path: 'listagem-pacientes-retorno',
+    component: ListagemPacientesRetornoComponent,
+  },
   { path: 'prontuario-medico ', component: ProntuarioMedicoComponent },
   { path: 'detalhes-medico', component: DetalhesMedicoComponent },
-  { path: 'cabecalho-detalhe-medico', component: CabecalhoDetalheMedicoComponent },
+  {
+    path: 'cabecalho-detalhe-medico',
+    component: CabecalhoDetalheMedicoComponent,
+  },
   { path: 'prescricao', component: PrescricaoComponent },
-  {path: 'reavaliacao', component: ReavaliacaoComponent},
-  {path: 'cabecalho-verde', component: CabecalhoVerdeComponent},
-  {path: 'avaliacao-medica', component: AvaliacaoMedicaComponent}
+  { path: 'reavaliacao', component: ReavaliacaoComponent },
+  { path: 'cabecalho-verde', component: CabecalhoVerdeComponent },
+  { path: 'avaliacao-medica', component: AvaliacaoMedicaComponent },
+  { path: 'enfermagem', component: EnfermagemComponent },
+  { path: 'medicacao', component: MedicacaoComponent },
+  { path: 'exame', component: ExameComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -31,4 +31,13 @@ export class PacoteMedidasComponent implements OnInit {
   Piperacilina(): void {
     this.piperacilina = !this.piperacilina;
   }
+
+  checks = false;
+  todos(e: any) {
+    if (e.target.checked == true) {
+      this.checks = true;
+    } else {
+      this.checks = false;
+    }
+  }
 }
