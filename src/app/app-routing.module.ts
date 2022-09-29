@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminComponent } from './admin/admin.component';
 import { AvaliacaoMedicaComponent } from './avaliacao-medica/avaliacao-medica.component';
 import { CabecalhoDetalheMedicoComponent } from './cabecalho-detalhe-medico/cabecalho-detalhe-medico.component';
 import { CabecalhoVerdeComponent } from './cabecalho-verde/cabecalho-verde.component';
@@ -16,6 +17,7 @@ import { ProntuarioMedicoComponent } from './prontuario-medico/prontuario-medico
 import { ReavaliacaoComponent } from './reavaliacao/reavaliacao.component';
 
 const routes: Routes = [
+  { path: 'admin', component: AdminComponent },
   { path: 'classificacao-risco', component: ClassificacaoRiscoComponent },
   { path: 'pacientes-atendimento', component: PacientesAtendimentoComponent },
   { path: 'lista-suspeita-sepse', component: ListaSuspeitaSepseComponent },

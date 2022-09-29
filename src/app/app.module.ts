@@ -29,6 +29,8 @@ import { ServicoSocialComponent } from './classificacao-risco/servico-social/ser
 import { EnfermagemComponent } from './enfermagem/enfermagem.component';
 import { MedicacaoComponent } from './enfermagem/medicacao/medicacao.component';
 import { ExameComponent } from './enfermagem/exame/exame.component';
+import { AdminComponent } from './admin/admin.component';
+import { SinaisVitaisComponent } from './classificacao-risco/sinais-vitais/sinais-vitais.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +57,8 @@ import { ExameComponent } from './enfermagem/exame/exame.component';
     EnfermagemComponent,
     MedicacaoComponent,
     ExameComponent,
+    AdminComponent,
+    SinaisVitaisComponent,
   ],
   imports: [
     NgSelectModule,

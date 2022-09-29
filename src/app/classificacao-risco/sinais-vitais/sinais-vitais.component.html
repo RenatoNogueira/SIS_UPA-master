@@ -1,0 +1,93 @@
+<form>
+  <section class="form-block p1" *ngIf="emergencia">
+    <label class="p2">Sinais Vitais:</label>
+    <hr>
+    <br>
+    <div class="form-group">
+      <label></label>
+      <label class="p1" for="peso_aproximado">Temperatura*</label>
+      <input mask="0*,000" type="text" placeholder="°C" id="peso_aproximado" size="8"
+        formControlName="peso_aproximado" />
+      <span>
+        <small>°C</small>
+      </span>
+      <label for="pressao_art" class="p1">Pressão Arterial*</label>
+      <input mask="000/000" dropSpecialCharacters="false" type="text" placeholder="mmHg" id="pressao_art" size="6"
+        formControlName="pressao_art" />
+      <span>
+        <small>mmHg</small>
+      </span>
+      <label for="pulso" class="p1">Pulso*</label>
+      <input mask="000" type="text" placeholder="bmp" id="pulso" size="3" formControlName="pulso" />
+      <span>
+        <small>bpm</small>
+      </span>
+      <label for="sato" class="p1">SpO²*</label>
+      <input mask="000" type="text" placeholder="%" id="sato" size="3" formControlName="sato" />
+      <span>
+        <small>%</small>
+      </span>
+    </div>
+
+
+    <div class="form-group">
+      <label></label>
+      <label for="sato" class="p1">SAT O²*</label>
+      <input mask="000" type="text" placeholder="%" id="sato" size="3" formControlName="sato" />
+      <span>
+        <small>SPO²</small>
+      </span>
+      <label for="frequencia_respiratoria" class="p1">Frequência Respiratória*</label>
+      <input autocomplete="off" mask="00" type="text" placeholder="rpm" id="frequencia_respiratoria" size="2"
+        formControlName="frequencia_respiratoria" />
+      <span>
+        <small>rpm</small>
+      </span>
+      <label for="nivel_consciencia" class="p1">Nível de Consciência*</label>
+      <div class="select">
+        <select id="nivel_consciencia" formControlName="nivel_consciencia" name="NivelConciencia"
+          (ngModel)="NivelConciencia">
+          <option></option>
+          <option *ngFor="let NivelConciencia of nivelConciencia" (ngValue)="NivelConciencia">{{ NivelConciencia }}
+          </option>
+        </select>
+      </div>
+      <label for="frequencia_respiratoria" class="p1">Oligúria(≥0,5ml/kg/h)*</label>
+
+      <clr-checkbox-wrapper clrInline>
+        <input type="checkbox" clrCheckbox name="options1" value="option1" />
+        <label>Sim &nbsp; &nbsp;</label>
+      </clr-checkbox-wrapper>
+      <clr-checkbox-wrapper clrInline>
+        <input type="checkbox" clrCheckbox name="options1" value="option1" />
+        <label>Não</label>
+      </clr-checkbox-wrapper>
+    </div>
+  </section>
+
+  <section class="form-block p1" formGroupName="Avaliacao" *ngIf="emergencia">
+    <div class="form-group">
+      <label class="p1">Outros Dados:</label>
+
+      <label class="p1" for="peso_aproximado">HGT</label>
+      <input type="text" placeholder="mg/dl" id="peso_aproximado" size="8" formControlName="peso_aproximado" />
+      <span>
+        <small>mg/dl</small>
+      </span>
+      <label class="p1" for="peso_aproximado">Peso</label>
+      <input type="text" placeholder="Kg" id="peso_aproximado" size="8" formControlName="peso_aproximado" />
+      <span>
+        <small>Kg</small>
+      </span>
+    </div>
+  </section>
+  <section class="form-block" *ngIf="emergencia">
+    <div class="form-group">
+      <label></label>
+      <span class="label label-danger p1">
+        Risco Alto de Sepse -
+        <span class="badge p1">Valor: 9</span>
+      </span>
+    </div>
+  </section>
+</form>

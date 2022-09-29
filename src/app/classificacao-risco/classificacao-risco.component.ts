@@ -66,17 +66,6 @@ export class ClassificacaoRiscoComponent implements OnInit {
     'Ao comando',
   ];
   RespostaMotora: string = 'Nenhuma';
-
-  // Campo Nível de Conci~encia (Sinais Vitais: )
-  nivelConciencia: string[] = [
-    'Alerta',
-    'Resposta Verbal',
-    'Dor',
-    'Não Responsivel',
-    'Confuso',
-  ];
-  NivelConciencia: string = 'Alerta';
-
   constructor() {}
 
   ngOnInit(): void {
@@ -104,6 +93,15 @@ export class ClassificacaoRiscoComponent implements OnInit {
       this.checks = true;
     } else {
       this.checks = false;
+    }
+  }
+
+  disabled = true;
+  button(e: any) {
+    if (e.target.disabled == false) {
+      this.disabled = false;
+    } else {
+      this.disabled = true;
     }
   }
 }
