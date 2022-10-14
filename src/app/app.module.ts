@@ -13,7 +13,6 @@ import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ListagemPacientesAtendimentoComponent } from './listagem-pacientes-atendimento/listagem-pacientes-atendimento.component';
 import { ProntuarioMedicoComponent } from './prontuario-medico/prontuario-medico.component';
-import { DetalheMedicoComponent } from './detalhe-medico/detalhe-medico.component';
 import { DetalhesMedicoComponent } from './detalhes-medico/detalhes-medico.component';
 import { CabecalhoDetalheMedicoComponent } from './cabecalho-detalhe-medico/cabecalho-detalhe-medico.component';
 import { OpcoesCausaExternaComponent } from './opcoes-causa-externa/opcoes-causa-externa.component';
@@ -55,7 +54,6 @@ registerLocaleData(localePt);
     SidebarComponent,
     ListagemPacientesAtendimentoComponent,
     ProntuarioMedicoComponent,
-    DetalheMedicoComponent,
     DetalhesMedicoComponent,
     CabecalhoDetalheMedicoComponent,
     OpcoesCausaExternaComponent,
