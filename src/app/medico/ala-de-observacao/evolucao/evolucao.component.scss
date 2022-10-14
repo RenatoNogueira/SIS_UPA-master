@@ -1,0 +1,40 @@
+.fab-wrapper[_ngcontent-c12] {
+  position: fixed;
+  bottom: 4vh;
+  right: 2vw;
+  z-index: 999;
+}
+
+
+.fab-wrapper[_ngcontent-c12]>.fab[_ngcontent-c12] {
+  border-radius: 50%;
+  padding: 50px;
+  line-height: 1;
+  white-space: normal;
+  width: 100px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: 0;
+  -webkit-box-shadow: 0 0 20px rgb(32, 32, 32);
+  box-shadow: 0 0 20px rgb(32, 32, 32);
+  ;
+}
+
+.btn-success .btn,
+.btn.btn-success {
+  border-color: #318700;
+  background-color: #318700;
+  color: #fff;
+}

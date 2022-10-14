@@ -1,0 +1,75 @@
+<section class="form-block">
+  <h5>Procedimento</h5>
+  <hr>
+
+  <form clrForm>
+    <clr-checkbox-container clrInline>
+      <label class="p3">Imobilização Ortopédica?</label>
+      <clr-checkbox-wrapper>
+        <input type="checkbox" clrCheckbox name="imob-sim" value="imob-sim" (click)="imobilicacaoYes()"
+          [disabled]="disabled" />
+        <label>Sim</label>
+      </clr-checkbox-wrapper>
+      <clr-checkbox-wrapper>
+        <input type="checkbox" clrCheckbox name="imob-nao" value="imob-nao" (change)="button($event)" />
+        <label>Não</label>
+      </clr-checkbox-wrapper>
+    </clr-checkbox-container>
+    <section *ngIf="imobilizacaoOrtopedica">
+      <clr-textarea-container>
+        <label></label>
+        <textarea clrTextarea name="description" rows="5" style="width: 74%"
+          placeholder="Imobilização Ortopédica?"></textarea>
+      </clr-textarea-container>
+      <label></label>
+      <button class="btn btn-primary">imprimir</button>
+    </section>
+  </form>
+
+  <form novalidate="" class="ng-untouched ng-pristine ng-valid">
+    <section class="form-block">
+    </section>
+  </form>
+  <div class="form-group row">
+    <div class="col-xs-12 form-group">
+      <label for="acessoRapido">ACESSO RÁPIDO
+        <a aria-haspopup="true" class="tooltip tooltip-lg" role="tooltip">
+          <clr-icon shape="info-circle" size="24" style="width: 24px; height: 24px;"></clr-icon>
+          <span class="tooltip-content">Exibe lista de procedimentos e outros ou campo para busca de
+            um único procedimento</span>
+        </a>
+        <div class="toggle-switch">
+          <input id="acessoRapido" type="checkbox" class="ng-valid ng-dirty ng-touched" (click)="toggle()">
+          <label for="acessoRapido"></label>
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <clr-tree *ngIf="acessoRapido">
+    <clr-tree-node *clrRecursiveFor="let file of procedimentoRoot; getChildren: getChildren"
+      [(clrSelected)]="file.selected">
+      <span>{{ file.name }}</span>
+    </clr-tree-node>
+  </clr-tree>
+  <br><br>
+  <div class="position-btn" *ngIf="acessoRapido">
+    <button class="btn">adicionar vários</button>
+    <button class="btn">limpar</button>
+  </div>
+</section>
+
+<section>
+  <div class="alert alert-info checkbox" role="alert">
+    <div class="alert-items">
+      <div class="alert-item static">
+        <div class="alert-icon-wrapper">
+          <clr-icon class="alert-icon" shape="info-circle"></clr-icon>
+        </div>
+        <span class="alert-text">Para imprimir, selecione esta caixa (<clr-icon shape="stop"></clr-icon>) em um ou
+          mais itens desejados abaixo e pressione o botão "Imprimir" que aparecerá.
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

@@ -6,11 +6,11 @@
         Início
       </a>
       <a clrVerticalNavLink routerLinkActive="active" routerLink="./classificacao-risco">
-        <clr-icon shape="thermometer" clrVerticalNavIcon></clr-icon>
+        <clr-icon shape="switch" clrVerticalNavIcon></clr-icon>
         Classificação de Risco
       </a>
       <clr-vertical-nav-group routerLinkActive="active">
-        <clr-icon shape="clipboard" clrVerticalNavIcon></clr-icon>
+        <clr-icon shape="certificate" clrVerticalNavIcon></clr-icon>
         Recepção
         <clr-vertical-nav-group-children>
           <a clrVerticalNavLink routerLink="./fire/charmander" routerLinkActive="active">
@@ -18,10 +18,13 @@
           </a>
         </clr-vertical-nav-group-children>
       </clr-vertical-nav-group>
-      <clr-vertical-nav-group routerLinkActive="active">
+      <clr-vertical-nav-group>
         <clr-icon shape="first-aid" clrVerticalNavIcon></clr-icon>
         Enfermagem
         <clr-vertical-nav-group-children>
+          <a clrVerticalNavLink routerLink="#" routerLinkActive="active">
+            Ala de Observação
+          </a>
           <a clrVerticalNavLink routerLink="../medicacao" routerLinkActive="active">
             Medicação
           </a>
@@ -30,20 +33,60 @@
           </a>
         </clr-vertical-nav-group-children>
       </clr-vertical-nav-group>
+
       <clr-vertical-nav-group routerLinkActive="active">
-        <clr-icon shape="employee" clrVerticalNavIcon></clr-icon>
-        Médico
+        <clr-icon shape="user" clrVerticalNavIcon></clr-icon>
+        Paciente
         <clr-vertical-nav-group-children>
           <a clrVerticalNavLink routerLink="#" routerLinkActive="active">
-            Lista para Atendimento
+            Lista Pacientes
+          </a>
+        </clr-vertical-nav-group-children>
+      </clr-vertical-nav-group>
+      <clr-vertical-nav-group>
+        <clr-icon shape="user" clrVerticalNavIcon></clr-icon>
+        Serviço Social
+        <clr-vertical-nav-group-children>
+          <a clrVerticalNavLink routerLink="#" routerLinkActive="active">
+            Lista do Serviço Social
           </a>
           <a clrVerticalNavLink routerLink="./listagem-pacientes-retorno" routerLinkActive="active">
+            Sem Documentação
+          </a>
+          <a clrVerticalNavLink routerLink="@@" routerLinkActive="active">
+            Ala de Observação
+          </a>
+          <a clrVerticalNavLink routerLink="../servico-social" routerLinkActive="active">
+            Recepção
+          </a>
+        </clr-vertical-nav-group-children>
+      </clr-vertical-nav-group>
+      <clr-vertical-nav-group routerLinkActive="active">
+        <clr-icon shape="flask" clrVerticalNavIcon></clr-icon>
+        Sala de Medicação
+        <clr-vertical-nav-group-children>
+          <a clrVerticalNavLink routerLink="#" routerLinkActive="active">
+            Paciente para Medicação
+          </a>
+        </clr-vertical-nav-group-children>
+      </clr-vertical-nav-group>
+      <clr-vertical-nav-group>
+        <clr-icon shape="terminal" clrVerticalNavIcon></clr-icon>
+        Médico
+        <clr-vertical-nav-group-children>
+          <a clrVerticalNavLink routerLink="./lista-de-atendimento" routerLinkActive="active">
+            Lista para Atendimento
+          </a>
+          <a clrVerticalNavLink routerLink="./lista-de-retorno" routerLinkActive="active">
             Lista de Retorno
           </a>
-          <a clrVerticalNavLink routerLink="./pacientes-atendimento" routerLinkActive="active">
+          <a clrVerticalNavLink routerLink="@#" routerLinkActive="active">
+            Suspeita Sindrome Gripal
+          </a>
+          <a clrVerticalNavLink routerLink="../suspeita-de-sepse" routerLinkActive="active">
             Suspeita de Sepse
           </a>
-          <a clrVerticalNavLink routerLink="./electric/raichu" routerLinkActive="active">
+          <a clrVerticalNavLink routerLink="./ala-de-observacao" routerLinkActive="active">
             Ala de Observação
           </a>
         </clr-vertical-nav-group-children>

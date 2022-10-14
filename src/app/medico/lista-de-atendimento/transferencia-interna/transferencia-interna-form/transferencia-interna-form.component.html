@@ -1,0 +1,28 @@
+<section class="form-block">
+  <h5>Trasferência Interna</h5>
+  <hr>
+
+
+  <form clrForm>
+    <clr-select-container>
+      <label class="p3">Encaminhar para:* </label>
+      <select clrSelect name="encaminhar" (ngModel)="Encaminhar">
+        <option></option>
+        <!---->
+        <option *ngFor="let Encaminhar of encaminhar" (ngValue)="Encaminhar">{{ Encaminhar }}</option>
+      </select>
+    </clr-select-container>
+  </form>
+
+  <form clrForm>
+    <section>
+      <clr-textarea-container>
+        <label class="p3">Observações*</label>
+        <textarea clrTextarea name="description" rows="5" style="width: 74%" placeholder="Observações"></textarea>
+      </clr-textarea-container>
+      <label></label>
+      <button class="btn btn-primary">encaminhar</button>
+    </section>
+  </form>
+
+</section>

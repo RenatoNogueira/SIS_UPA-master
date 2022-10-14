@@ -1,0 +1,127 @@
+<h4 class="destaque">
+  Lista para Atendimento Médico
+</h4>
+<clr-datagrid>
+  <clr-dg-column [clrDgField]="'nome'">Protocolo</clr-dg-column>
+  <clr-dg-column [clrDgField]="'nome-paciente'">Nome do Paciente</clr-dg-column>
+  <clr-dg-column [clrDgField]="'especialidade'">Especialidade</clr-dg-column>
+  <clr-dg-column [clrDgField]="'especialidade'">Médico</clr-dg-column>
+  <clr-dg-column [clrDgField]="'class-risco'">Classi. Risco</clr-dg-column>
+  <clr-dg-column [clrDgField]="'tempo'">Tempo</clr-dg-column>
+  <clr-dg-column>Ações</clr-dg-column>
+  <clr-dg-column>Boletim</clr-dg-column>
+
+  <clr-dg-row>
+    <clr-dg-cell>402208150003</clr-dg-cell>
+    <clr-dg-cell>ALICIA MANOELE SOUSA DE AQUINO</clr-dg-cell>
+    <clr-dg-cell>Clínica Médica</clr-dg-cell>
+    <clr-dg-cell>ILDENÊ RODRIGUES MORAES</clr-dg-cell>
+    <clr-dg-cell><span class="class-risco-verde">Verde</span></clr-dg-cell>
+    <clr-dg-cell>1h 2min</clr-dg-cell>
+    <clr-dg-cell>
+      <a aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-left" role="tooltip">
+        <clr-icon class="is-solid" shape="pencil"></clr-icon>
+        <span class="tooltip-content">Visualizar</span>
+      </a>
+    </clr-dg-cell>
+    <clr-dg-cell>
+      <a aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-left" role="tooltip" href="#">
+        <clr-icon shape="printer" class="is-solid"></clr-icon>
+        <span class="tooltip-content">Boletim de Atendimento</span>
+      </a>
+    </clr-dg-cell>
+  </clr-dg-row>
+
+  <clr-dg-row>
+    <clr-dg-cell>402208150001</clr-dg-cell>
+    <clr-dg-cell>RICARDO SÉRGIO ARAÚJO LIMA</clr-dg-cell>
+    <clr-dg-cell>Clínica Médica</clr-dg-cell>
+    <clr-dg-cell>ILDENÊ RODRIGUES MORAES</clr-dg-cell>
+    <clr-dg-cell><span class="class-risco-azul">Azul</span></clr-dg-cell>
+    <clr-dg-cell>2d 3h 4min</clr-dg-cell>
+    <clr-dg-cell>
+      <a aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-left" role="tooltip" href="#">
+        <clr-icon class="is-solid" shape="pencil"></clr-icon>
+        <span class="tooltip-content">Visualizar</span>
+      </a>
+    </clr-dg-cell>
+    <clr-dg-cell>
+      <a aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-left" role="tooltip" href="#">
+        <clr-icon shape="printer" class="is-solid"></clr-icon>
+        <span class="tooltip-content">Boletim de Atendimento</span>
+      </a>
+    </clr-dg-cell>
+  </clr-dg-row>
+
+  <clr-dg-row>
+    <clr-dg-cell>402208150002</clr-dg-cell>
+    <clr-dg-cell>JÉSSICA COSTA MENDES</clr-dg-cell>
+    <clr-dg-cell>Clínica Médica</clr-dg-cell>
+    <clr-dg-cell>ILDENÊ RODRIGUES MORAES</clr-dg-cell>
+    <clr-dg-cell><span class="class-risco-verde">Verde</span></clr-dg-cell>
+    <clr-dg-cell>9d 8h 7min</clr-dg-cell>
+    <clr-dg-cell>
+      <a aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-left" role="tooltip" (click)="basic = true">
+        <clr-icon class="is-solid" shape="pencil"></clr-icon>
+        <span class="tooltip-content">Visualizar</span>
+      </a>
+    </clr-dg-cell>
+    <clr-dg-cell>
+      <a aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-left" role="tooltip" href="#">
+        <clr-icon shape="printer" class="is-solid"></clr-icon>
+        <span class="tooltip-content">Boletim de Atendimento</span>
+      </a>
+    </clr-dg-cell>
+  </clr-dg-row>
+
+  <clr-dg-footer>1 - 6 de 6 registros</clr-dg-footer>
+</clr-datagrid>
+
+
+
+<!-- MODAL -->
+<clr-modal [(clrModalOpen)]="basic">
+  <h3 class="modal-title">Chamada de Paciente</h3>
+  <div class="modal-body" routerLinkActive="active">
+    <div class="" style="margin-top: 1.5em">
+      <div class="row" style="padding-bottom: 1em">
+        <div class="col-xs-12 ng-star-inserted" style="padding-bottom: 1em">
+        </div>
+        <div class="col-xs-6">
+          <label for=""><b> Nome: </b></label>
+          <span>JÉSSICA COSTA MENDES</span>
+        </div>
+        <div class="col-xs-6">
+          <label for=""> <b> Especialidade: </b> </label>
+          <span>Clínica Médica</span>
+        </div>
+      </div>
+      <div class="row" style="padding-bottom: 1em">
+        <div class="col-xs-6">
+          <label for=""><b> Protocolo: </b> </label>
+          <span>402208150002</span>
+        </div>
+        <div class="col-xs-6">
+          <label for=""><b> Tempo em espera: </b> </label>
+          <span>9d 8h 7min</span>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 2em; padding-left: 20px;">
+      <div class="btn-group">
+        <button class="btn" routerLinkActive="active" routerLink="../prontuario">Atender</button>
+        <button class="btn btn-danger-outline" (click)="basic = false">Sair</button>
+      </div>
+    </div>
+  </div>
+</clr-modal>
+
+<div class="col-xs-4 ng-star-inserted">
+  <button class="btn btn-info-outline" style="margin-top: 2em" disabled="">
+    Painel desativado no momento
+  </button>
+</div>
+<button _ngcontent-c12="" class="btn btn-icon btn-link" type="button">
+  <clr-icon _ngcontent-c12="" shape="printer">
+  </clr-icon> LISTA DE PACIENTES
+</button>

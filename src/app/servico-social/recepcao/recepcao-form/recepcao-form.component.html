@@ -1,0 +1,214 @@
+<b class="p3-font">Recepção</b>
+<hr>
+<form clrForm>
+  <clr-input-container>
+    <label class="p3">Protocolo de Atendimento:
+      <span class="label label-info">402208190001</span>
+    </label>
+  </clr-input-container>
+  <clr-input-container>
+    <label class="p3">Nome:</label>
+    <input clrInput type="text" size="50" class="p3-font" name="example" placeholder="JESICA COSTA MENDES" disabled />
+  </clr-input-container>
+  <br><br>
+</form>
+
+<b class="p3-font">Informaçõe do Paciente:</b>
+<hr>
+<form clrForm>
+  <clr-input-container>
+    <label class="p3">Como o paciente chegou:</label>
+    <input clrInput type="text" name="example" placeholder="Como o paciente chegou?" size="50" />
+  </clr-input-container>
+
+  <clr-checkbox-wrapper>
+    <input type="checkbox" clrCheckbox name="option1" required value="option1" />
+    <label class="p5">Paciente sem documento</label>
+  </clr-checkbox-wrapper>
+  <br><br>
+</form>
+
+<form clrForm>
+  <clr-textarea-container>
+    <label class="p3">Justificativa da falta de documento</label>
+    <textarea clrTextarea name="description" rows="5" style="width: 74%"
+      placeholder="Justificativa da falta de documento"></textarea>
+  </clr-textarea-container>
+  <br>
+  <clr-input-container>
+    <label class="p3">Nome do responsável:</label>
+    <input clrInput type="text" size="40" name="example" placeholder="Nome do responsável" />
+  </clr-input-container>
+  <br>
+  <clr-input-container>
+    <label class="p3">Cadastro Nacional de Saúde(CNS):<a>CADWEB</a>
+    </label>
+    <input clrInput type="text" name="example" placeholder="Cadastro Nacional de Saúde" size="26" />
+  </clr-input-container>
+  <button class="btn btn-primary btn-sm button-cns">buscar</button>
+  <br>
+  <clr-input-container>
+    <label class="p3">Cadastro de Pessoa Física (CPF):
+    </label>
+    <input clrInput type="text" name="example" placeholder="Cadastro de Pessoa Física" size="26" />
+  </clr-input-container>
+  <button class="btn btn-primary btn-sm button-cpf">buscar</button>
+  <br>
+  <clr-input-container>
+    <label class="p3">Nome do pacente:</label>
+    <input clrInput type="text" size="40" name="example" placeholder="Nome do responsável" />
+  </clr-input-container>
+
+  <clr-checkbox-wrapper>
+    <input type="checkbox" clrCheckbox name="option1" required value="option1" />
+    <label class="p5" style="margin-left: 266px;">Paciente sem nome social</label>
+  </clr-checkbox-wrapper>
+
+</form>
+
+<form clrForm>
+
+  <clr-date-container>
+    <label class="p5">Data de Nascimento</label>
+    <input type="date" clrDate name="Data de Nascimento">
+  </clr-date-container>
+  <clr-input-container class="idade">
+    <label class="p3">Idade:
+      <input clrInput type="text" size="1" name="example" disabled />
+    </label>
+  </clr-input-container>
+
+  <clr-input-container>
+    <label class="p3">Nome da Mãe:</label>
+    <input clrInput type="text" size="40" name="example" />
+  </clr-input-container>
+
+  <clr-select-container>
+    <label class="p3">Sexo:*</label>
+    <select clrSelect name="RespostaVerbal" (ngModel)="Sexo">
+      <option></option>
+      <option value="1" class="ng-star-inserted" *ngFor="let Sexo of sexo" (ngValue)="Sexo">
+        {{
+        Sexo }}</option>
+    </select>
+  </clr-select-container>
+
+  <clr-select-container>
+    <label class="p3">Cor/Raça:*</label>
+    <select clrSelect name="RespostaVerbal" (ngModel)="CorRaca">
+      <option></option>
+      <option value="1" class="ng-star-inserted" *ngFor="let CorRaca of corRaca" (ngValue)="CorRaca">
+        {{
+        CorRaca }}</option>
+    </select>
+  </clr-select-container>
+
+  <clr-input-container>
+    <label class="p5">Nacionalidade:*</label>
+    <input clrInput type="text" name="Nacionalidade" size="25">
+  </clr-input-container>
+  <clr-input-container class="nacionalidade">
+    <label class="p3">Naturalidade:
+    </label>
+    <input class="nacio-label" clrInput type="text" size="25" name="example" />
+  </clr-input-container>
+
+  <clr-select-container>
+    <label class="p3">Escolaridade:*</label>
+    <select clrSelect name="Escolaridade" (ngModel)="Nacionalidade">
+      <option></option>
+      <option value="1" class="ng-star-inserted" *ngFor="let Nacionalidade of nacionalidade" (ngValue)="Nacionalidade">
+        {{
+        Nacionalidade }}</option>
+    </select>
+  </clr-select-container>
+
+  <clr-select-container>
+    <label class="p3">Ocupação:*</label>
+    <select clrSelect name="Ocupação" (ngModel)="Ocupacao">
+      <option></option>
+      <option value="1" class="ng-star-inserted" *ngFor="let Ocupacao of ocupacao" (ngValue)="Ocupacao">
+        {{
+        Ocupacao }}</option>
+    </select>
+  </clr-select-container>
+</form>
+
+<form clrForm>
+  <clr-input-container>
+    <label class="p3">CEP:
+    </label>
+    <input clrInput type="text" name="example" placeholder="00000-000" size="15" />
+  </clr-input-container>
+  <button class="btn btn-primary btn-sm button-cep">buscar</button>
+  <img class="img-correios" src="https://upa-qa.saude.ma.gov.br/assets/img/correios.png" alt="">
+  <clr-control-helper class="help">(Buscar CEP nos Correios)</clr-control-helper>
+  <br>
+
+  <clr-select-container>
+    <label class="p3">Tipo Logradouro:*</label>
+    <select clrSelect name="Ocupação" (ngModel)="TipoLogradouro">
+      <option></option>
+      <option value="1" class="ng-star-inserted" *ngFor="let TipoLogradouro of tipoLogradouro"
+        (ngValue)="TipoLogradouro">
+        {{
+        TipoLogradouro }}</option>
+    </select>
+  </clr-select-container>
+
+  <clr-input-container>
+    <label class="p3">Logradouro:</label>
+    <input clrInput type="text" size="60" name="example" />
+  </clr-input-container>
+
+  <clr-input-container>
+    <label class="p3">Nº:</label>
+    <input clrInput type="text" size="6" name="example" />
+  </clr-input-container>
+
+  <clr-input-container>
+    <label class="p3">Complemento:</label>
+    <input clrInput type="text" size="80" name="example" />
+  </clr-input-container>
+
+  <clr-input-container>
+    <label class="p3">Bairro:</label>
+    <input clrInput type="text" size="40" name="example" />
+  </clr-input-container>
+
+  <clr-select-container>
+    <label class="p5">UF:*</label>
+    <select clrSelect name="Ocupação" (ngModel)="Uf">
+      <option></option>
+      <option value="1" class="ng-star-inserted" *ngFor="let Uf of uf" (ngValue)="Uf">
+        {{
+        Uf }}</option>
+    </select>
+  </clr-select-container>
+  <clr-select-container class="nacionalidade">
+    <label class="p3">Cidade:
+    </label>
+    <select clrSelect name="Ocupação" (ngModel)="Cidades" class="cidades">
+      <option></option>
+      <option value="1" class="ng-star-inserted" *ngFor="let Cidades of cidades" (ngValue)="Cidades">
+        {{
+        Cidades }}</option>
+    </select>
+  </clr-select-container>
+
+  <br>
+
+  <clr-input-container>
+    <label class="p5">Telefone/Celular:*</label>
+    <input clrInput type="text" name="Nacionalidade" size="25" placeholder="(98) 99999-9999">
+  </clr-input-container>
+  <clr-input-container class="nacionalidade">
+    <label class="p3">Tipo de Contato:
+    </label>
+    <input class="tipo-contato" clrInput type="text" size="25" name="example" />
+  </clr-input-container>
+
+</form>
+
+<br><br>
+<button class="btn btn-primary">Concluir</button>

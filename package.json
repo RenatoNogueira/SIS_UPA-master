@@ -24,6 +24,7 @@
     "@clr/ui": "^13.8.0",
     "@ng-select/ng-select": "^9.0.2",
     "devextreme-angular": "^22.1.5",
+    "estados-br": "^0.0.5",
     "normalize.css": "^8.0.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

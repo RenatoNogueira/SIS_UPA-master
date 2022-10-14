@@ -28,6 +28,7 @@ clr-control-error,
 lr-checkbox-wrapper,
 clr-icon,
 clr-modal,
+div,
 table,
 tr,
 th,
@@ -48,4 +49,18 @@ hr,
   user-select: none;
   /* Possível implementação no futuro */
   /* cursor: default; */
+}
+
+.p1 {
+  font-size: .7rem;
+}
+
+.font-form {
+  font-size: 1rem;
+}
+
+.p3-font {
+  color: rgb(93, 93, 93);
+  font-size: .8rem;
+  font-weight: 400;
 }

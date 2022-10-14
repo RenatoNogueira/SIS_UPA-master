@@ -1,0 +1,61 @@
+<app-cabecalho-verde></app-cabecalho-verde>
+
+<clr-tabs>
+  <clr-tab>
+    <button clrTabLink (click)="prontuario()">Prontuário</button>
+    <ng-template>
+      <clr-tab-content>
+        ...
+      </clr-tab-content>
+    </ng-template>
+  </clr-tab>
+
+  <clr-tab>
+    <button clrTabLink (click)="Evolucao()">Evolução</button>
+    <ng-template>
+      <clr-tab-content>
+        ...
+      </clr-tab-content>
+    </ng-template>
+  </clr-tab>
+
+  <clr-tab>
+    <button clrTabLink>Prescrição</button>
+    <ng-template>
+      <clr-tab-content>
+        ...
+      </clr-tab-content>
+    </ng-template>
+  </clr-tab>
+
+  <clr-tab>
+    <button clrTabLink>Apoio Diagnóstico</button>
+    <ng-template>
+      <clr-tab-content>
+        ...
+      </clr-tab-content>
+    </ng-template>
+  </clr-tab>
+
+  <clr-tab>
+    <button clrTabLink>Procedimento</button>
+    <ng-template>
+      <clr-tab-content>
+        ...
+      </clr-tab-content>
+    </ng-template>
+  </clr-tab>
+
+  <clr-tab>
+    <button clrTabLink>Trasnferência
+      Interna</button>
+    <ng-template>
+      <clr-tab-content>
+        ...
+      </clr-tab-content>
+    </ng-template>
+  </clr-tab>
+</clr-tabs>
+
+
+<app-evolucao *ngIf="evolucao"></app-evolucao>

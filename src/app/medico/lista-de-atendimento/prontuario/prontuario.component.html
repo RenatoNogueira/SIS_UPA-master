@@ -1,0 +1,70 @@
+<app-cabecalho-detalhe-medico></app-cabecalho-detalhe-medico>
+
+<clr-tabs>
+  <clr-tab>
+    <button clrTabLink (click)="prontuario()">Prontuário</button>
+    <ng-template>
+      <clr-tab-content>
+        ...
+      </clr-tab-content>
+    </ng-template>
+  </clr-tab>
+
+  <clr-tab>
+    <button clrTabLink>Prescrição</button>
+    <ng-template>
+      <clr-tab-content>
+        ...
+      </clr-tab-content>
+    </ng-template>
+  </clr-tab>
+
+  <clr-tab>
+    <button clrTabLink>Apoio Diagnóstico</button>
+    <ng-template>
+      <clr-tab-content>
+        ...
+      </clr-tab-content>
+    </ng-template>
+  </clr-tab>
+
+  <clr-tab>
+    <button clrTabLink (click)="procedimentoSelect()">Procedimento</button>
+    <ng-template>
+      <clr-tab-content>
+        ...
+      </clr-tab-content>
+    </ng-template>
+  </clr-tab>
+
+  <clr-tab>
+    <button clrTabLink>Receituário</button>
+    <ng-template>
+      <clr-tab-content>
+        ...
+      </clr-tab-content>
+    </ng-template>
+  </clr-tab>
+
+  <clr-tab>
+    <button clrTabLink>Atestado</button>
+    <ng-template>
+      <clr-tab-content>
+        ...
+      </clr-tab-content>
+    </ng-template>
+  </clr-tab>
+
+  <clr-tab>
+    <button clrTabLink (click)="transfInterna()">Trasnferência
+      Interna</button>
+    <ng-template>
+      <clr-tab-content>
+        ...
+      </clr-tab-content>
+    </ng-template>
+  </clr-tab>
+</clr-tabs>
+<app-procedimento-form *ngIf="procedimento"></app-procedimento-form>
+<app-transferencia-interna-form *ngIf="transfInter"></app-transferencia-interna-form>
+<app-prontuario-form *ngIf="Prontuario"></app-prontuario-form>

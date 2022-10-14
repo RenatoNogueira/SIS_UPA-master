@@ -1,4 +1,44 @@
-.greenBg{
-  padding: 6px;
-  height: 34px;
+.sticky[_ngcontent-c20] {
+  margin: 0 0 -25px;
+  padding: 2px 0 0 12px;
+}
+
+.card {
+  -webkit-box-shadow: 0 0.125rem 0 0 #d7d7d7;
+  box-shadow: 0 0.125rem 0 0 #d7d7d7;
+  border-radius: 0.125rem;
+  border: 1px solid #d7d7d7;
+  position: relative;
+  display: block;
+  background-color: #fff;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.alert-items {
+  -ms-flex: 1 1 auto;
+  -webkit-box-flex: 1;
+  flex: 1 1 auto;
+  -ms-flex-flow: column nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-flow: column nowrap;
+  padding: 0.33333rem calc(0.5rem - 1px);
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+}
+
+.nome-paciente[_ngcontent-c20] {
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #fff;
+}
+
+.alert-text {
+  text-align: center;
+}
+
+.cor-retorno {
+  background: #9c03a1;
 }

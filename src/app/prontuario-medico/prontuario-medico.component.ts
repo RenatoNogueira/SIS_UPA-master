@@ -6,28 +6,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./prontuario-medico.component.scss'],
 })
 export class ProntuarioMedicoComponent implements OnInit {
-  mostraPacoteMedidas = false;
-  mostraAvaliacao = false;
-  mostrarAvaliacaoMedica = false;
-  reavalicao = false;
-  hAtendimento = false;
   constructor() {}
 
   ngOnInit(): void {}
 
+  mostraPacoteMedidas = false;
   mostrarPacoteMedidas() {
     this.mostraPacoteMedidas = !this.mostraPacoteMedidas;
   }
-
+  mostrarAvaliacaoMedica = false;
   mostraAvaliacaoMedica() {
     this.mostrarAvaliacaoMedica = !this.mostrarAvaliacaoMedica;
   }
-
+  reavalicao = false;
   mostraReavaliacao() {
     this.reavalicao = !this.reavalicao;
   }
-
+  hAtendimento = false;
   exibir() {
     this.hAtendimento = !this.hAtendimento;
+  }
+  outras = false;
+  outra() {
+    this.outras = !this.outras;
   }
 }

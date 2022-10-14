@@ -10,7 +10,7 @@ export class ClassificacaoRiscoComponent implements OnInit {
   outrasDoencas = false;
   medUso = false;
   alergia = false;
-  // campo Causa Extrena:*
+  // campo Causa Extrema:*
   CausaExtrema: string[] = [
     'Acidente de Trabalho',
     'Acidente de transporte por água',
@@ -99,7 +99,7 @@ export class ClassificacaoRiscoComponent implements OnInit {
   disabled = true;
   button(e: any) {
     if (e.target.disabled == false) {
-      this.disabled = false;
+      this.disabled = !this.disabled;
     } else {
       this.disabled = true;
     }

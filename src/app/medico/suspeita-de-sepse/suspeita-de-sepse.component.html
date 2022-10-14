@@ -1,0 +1,161 @@
+<h4 class="destaque">
+  Lista de Pacientes com Suspeita de Sepse
+</h4>
+
+<clr-datagrid>
+  <clr-dg-column [clrDgField]="'nome'" *ngFor=" let sepse of sepse"> {{ sepse.proto }}</clr-dg-column>
+  <clr-dg-column [clrDgField]="'nome-paciente'" *ngFor=" let sepse of sepse">{{ sepse.nome }}</clr-dg-column>
+  <clr-dg-column [clrDgField]="'especialidade'" *ngFor=" let sepse of sepse">{{ sepse.espec }}</clr-dg-column>
+  <clr-dg-column [clrDgField]="'situação'" *ngFor=" let sepse of sepse">{{ sepse.situ }}</clr-dg-column>
+  <clr-dg-column [clrDgField]="'class-risco'" *ngFor=" let sepse of sepse">{{ sepse.classRisco}}</clr-dg-column>
+  <clr-dg-column [clrDgField]="'tempo'" *ngFor=" let sepse of sepse">{{ sepse.temp }}</clr-dg-column>
+  <clr-dg-column *ngFor=" let sepse of sepse">{{ sepse.acao }}</clr-dg-column>
+
+  <clr-dg-row>
+    <clr-dg-cell>402208150003</clr-dg-cell>
+    <clr-dg-cell>ALICIA MANOELE SOUSA DE AQUINO</clr-dg-cell>
+    <clr-dg-cell>Clínica Médica</clr-dg-cell>
+    <clr-dg-cell>Suspeita de Sepse</clr-dg-cell>
+    <clr-dg-cell><span class="class-risco-amarela">Amarela</span></clr-dg-cell>
+    <clr-dg-cell>1h 2min</clr-dg-cell>
+    <clr-dg-cell>
+      <a aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-left" role="tooltip" href="#">
+        <clr-icon class="is-solid" shape="pencil"></clr-icon>
+        <span class="tooltip-content">Visualizar</span>
+      </a>
+    </clr-dg-cell>
+  </clr-dg-row>
+
+  <clr-dg-row>
+    <clr-dg-cell>402208150001</clr-dg-cell>
+    <clr-dg-cell>RICARDO SÉRGIO ARAÚJO LIMA</clr-dg-cell>
+    <clr-dg-cell>Clínica Médica</clr-dg-cell>
+    <clr-dg-cell>Sepse Confirmado</clr-dg-cell>
+    <clr-dg-cell><span class="class-risco-azul">Azul</span></clr-dg-cell>
+    <clr-dg-cell>2d 3h 4min</clr-dg-cell>
+    <clr-dg-cell>
+      <a aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-left" role="tooltip" href="#">
+        <clr-icon class="is-solid" shape="pencil"></clr-icon>
+        <span class="tooltip-content">Visualizar</span>
+      </a>
+    </clr-dg-cell>
+  </clr-dg-row>
+  <!-- correto -->
+  <clr-dg-row>
+    <clr-dg-cell *ngFor=" let lista of lista">{{ lista.numeroproto }}</clr-dg-cell>
+    <clr-dg-cell *ngFor=" let lista of lista">{{ lista.paciente }}</clr-dg-cell>
+    <clr-dg-cell *ngFor=" let lista of lista">{{ lista.especialidade }}</clr-dg-cell>
+    <clr-dg-cell *ngFor=" let lista of lista">{{ lista.situacao }}</clr-dg-cell>
+    <clr-dg-cell *ngFor=" let lista of lista"><span class="class-risco-verde">{{ lista.classificacaoRisco }}</span>
+    </clr-dg-cell>
+    <clr-dg-cell *ngFor=" let lista of lista">{{ lista.tempo }}</clr-dg-cell>
+    <clr-dg-cell>
+      <a aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-left" role="tooltip" (click)="basic = true"
+        *ngFor=" let lista of lista">
+        <clr-icon class="is-solid" shape="pencil"></clr-icon>
+        <span class="tooltip-content">Visualizar</span>
+      </a>
+    </clr-dg-cell>
+  </clr-dg-row>
+  <!-- -->
+
+  <clr-dg-row>
+    <clr-dg-cell>402208152896</clr-dg-cell>
+    <clr-dg-cell>JOYCE PROTAZIO DA SILVA</clr-dg-cell>
+    <clr-dg-cell>Clínica Médica</clr-dg-cell>
+    <clr-dg-cell>Suspeita de Sepse</clr-dg-cell>
+    <clr-dg-cell><span class="class-risco-azul">Azul</span></clr-dg-cell>
+    <clr-dg-cell>12d 2h 30min</clr-dg-cell>
+    <clr-dg-cell>
+      <a aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-left" role="tooltip" href="#">
+        <clr-icon class="is-solid" shape="pencil"></clr-icon>
+        <span class="tooltip-content">Visualizar</span>
+      </a>
+    </clr-dg-cell>
+  </clr-dg-row>
+
+  <clr-dg-row>
+    <clr-dg-cell>402208150222</clr-dg-cell>
+    <clr-dg-cell>RENATO PEREIRA DA SILVA NOGUEIRA</clr-dg-cell>
+    <clr-dg-cell>Clínica Médica</clr-dg-cell>
+    <clr-dg-cell>Suspeita de Sepse</clr-dg-cell>
+    <clr-dg-cell><span class="class-risco-vermelha">Vermelha</span></clr-dg-cell>
+    <clr-dg-cell>1d 2h 2min</clr-dg-cell>
+    <clr-dg-cell>
+      <a aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-left" role="tooltip" href="#">
+        <clr-icon class="is-solid" shape="pencil"></clr-icon>
+        <span class="tooltip-content">Visualizar</span>
+      </a>
+    </clr-dg-cell>
+  </clr-dg-row>
+
+  <clr-dg-row>
+    <clr-dg-cell>402208125783</clr-dg-cell>
+    <clr-dg-cell>MAURO SERGIO SANTOS SILVA</clr-dg-cell>
+    <clr-dg-cell>Clínica Médica</clr-dg-cell>
+    <clr-dg-cell>Sepse Confirmado</clr-dg-cell>
+    <clr-dg-cell><span class="class-risco-amarela">Amarela</span></clr-dg-cell>
+    <clr-dg-cell>8h 7min</clr-dg-cell>
+    <clr-dg-cell>
+      <a aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-left" role="tooltip" href="#">
+        <clr-icon class="is-solid" shape="pencil"></clr-icon>
+        <span class="tooltip-content">Visualizar</span>
+      </a>
+    </clr-dg-cell>
+  </clr-dg-row>
+
+  <clr-dg-footer>1 - 6 de 6 registros</clr-dg-footer>
+</clr-datagrid>
+
+<div class="col-xs-4 ng-star-inserted">
+  <button class="btn btn-info-outline" style="margin-top: 2em" disabled="">
+    Painel desativado no momento
+  </button>
+</div>
+<button _ngcontent-c12="" class="btn btn-icon btn-link" type="button">
+  <clr-icon _ngcontent-c12="" shape="printer">
+  </clr-icon> LISTA DE PACIENTES
+</button>
+
+
+
+<!-- MODAL -->
+<clr-modal [(clrModalOpen)]="basic">
+  <h3 class="modal-title">Chamada de Paciente</h3>
+  <div class="modal-body" routerLinkActive="active">
+    <div class="" style="margin-top: 1.5em">
+      <div class="row" style="padding-bottom: 1em">
+        <div class="col-xs-12 ng-star-inserted" style="padding-bottom: 1em">
+        </div>
+        <div class="col-xs-6">
+          <label for=""><b> Nome: </b></label>
+          <span>RICARDO SÉRGIO ARAÚJO LIMA</span>
+        </div>
+        <div class="col-xs-6">
+          <label for=""> <b> Especialidade: </b> </label>
+          <span>Clínica Médica</span>
+        </div>
+      </div>
+      <div class="row" style="padding-bottom: 1em">
+        <div class="col-xs-6">
+          <label for=""><b> Protocolo: </b> </label>
+          <span>402208150001</span>
+        </div>
+        <div class="col-xs-6">
+          <label for=""><b> Tempo em espera: </b> </label>
+          <span>4h 32min</span>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 2em; padding-left: 20px;">
+
+
+      <div class="row" style="margin-top: 2em; padding-left: 20px;">
+        <div class="btn-group">
+          <button class="btn" routerLinkActive="active" routerLink="/detalhes-medico">Atender</button>
+          <button class="btn btn-danger-outline" (click)="basic = false">Sair</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</clr-modal>

@@ -1,0 +1,156 @@
+<app-cabecalho-verde></app-cabecalho-verde>
+<ul id="demoTabs" class="nav" role="tablist">
+  <li class="nav-item">
+    <button id="tab1" class="btn btn-link nav-link active" aria-controls="panel1" aria-selected="true"
+      type="button">Prontuário</button>
+  </li>
+  <li role="presentation" class="nav-item">
+    <button id="tab2" class="btn btn-link nav-link" aria-controls="panel2" aria-selected="false"
+      type="button">Prescrição</button>
+  </li>
+  <li role="presentation" class="nav-item">
+    <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3" aria-selected="false" type="button">Apoio
+      Diagnóstico</button>
+  </li>
+  <li role="presentation" class="nav-item">
+    <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3" aria-selected="false"
+      type="button">Procedimento</button>
+  </li>
+  <li role="presentation" class="nav-item">
+    <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3" aria-selected="false"
+      type="button">Receituário</button>
+  </li>
+  <li role="presentation" class="nav-item">
+    <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3" aria-selected="false"
+      type="button">Atestado</button>
+  </li>
+  <li role="presentation" class="nav-item">
+    <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3" aria-selected="false"
+      type="button">Trasnferência Interna</button>
+  </li>
+</ul>
+
+<div style="padding: 1em 0" class="ng-star-inserted">
+  <b>Histórico de Atendimentos</b>
+  <button class="btn btn-default btn-sm" style="display: block" (click)="exibir()">Exibir</button>
+
+  <app-historico-atendimento *ngIf="hAtendimento"></app-historico-atendimento>
+
+</div>
+
+<div class="ng-star-inserted">
+  <b>Detalhes da Classificação de Risco</b>
+  <button class="btn btn-default btn-sm" style="display: block">Exibir</button>
+</div>
+<br>
+<form>
+  <app-sinais-vitais></app-sinais-vitais>
+  <br>
+  <section>
+    <form clrForm clrLayout="vertical" style="margin: 2px 1em 0 180px;">
+      <section>
+        <form class="clr-control-inline">
+          <label><b style="margin-right: 10px;">Iniciar protocolo SEPSE?</b></label>
+          <div class="clr-control-inline">
+            <div class="clr-checkbox-wrapper">
+              <input type="checkbox" id="infeccao-s" name="infeccao-s" value="infeccao-s" class="clr-checkbox" />
+              <label for="infeccao-s" class="clr-control-label">Sim</label>
+            </div>
+            <div class="clr-checkbox-wrapper">
+              <input type="checkbox" id="infeccao-n" name="infeccao-n" value="infeccao-n" class="clr-checkbox" />
+              <label for="infeccao-n" class="clr-control-label">Não</label>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <form clrLayout="horizontal" class="clr-control-inline" *ngIf="mostrarAvaliacaoMedica">
+        <label><b style="margin-right: 10px;">Iniciar Protocolo de SEPSE? *</b> </label>
+        <div class="clr-control-container clr-control-inline">
+          <div class="clr-checkbox-wrapper">
+            <input type="checkbox" id="vertical-checkbox1" name="checkbox-inline-1" value="option1"
+              class="clr-checkbox" />
+            <label for="vertical-checkbox1" class="clr-control-label">Sim</label>
+          </div>
+          <div class="clr-checkbox-wrapper">
+            <input type="checkbox" id="vertical-checkbox2" name="checkbox-inline-2" value="option2"
+              class="clr-checkbox" />
+            <label for="vertical-checkbox2" class="clr-control-label">Não</label>
+          </div>
+        </div>
+      </form>
+
+    </form>
+  </section>
+  <br>
+  <section>
+    <b>Reavaliação</b>
+    <hr>
+    <form clrForm clrLayout="vertical">
+      <div class="form-group">
+        <label></label>
+        <textarea id="formFields_8" cols="110" rows="5" placeholder="Reavaliação"></textarea>
+      </div>
+    </form>
+    <button class="btn btn-primary" disabled>ADICIONAR</button>
+  </section>
+
+  <br><br>
+
+  <section>
+    <b>Anamnese</b>
+    <hr>
+    <form clrForm clrLayout="vertical">
+      <div class="form-group">
+        <label></label>
+        <label style="font-size: 12px" class="required">História da Doença Atual</label>
+      </div>
+      <div class="form-group">
+        <label></label>
+        <textarea id="formFields_8" cols="110" rows="5"></textarea>
+      </div>
+      <div class="form-group">
+        <label></label>
+        <label style="font-size: 12px" class="required">Exame Físico</label>
+      </div>
+      <div class="form-group">
+        <label></label>
+        <textarea id="formFields_8" cols="110" rows="5"></textarea>
+      </div>
+      <div class="form-group">
+        <label></label>
+        <label style="font-size: 12px" class="required">Hipótese do Diagnóstico</label>
+      </div>
+      <div class="form-group">
+        <label></label>
+        <textarea id="formFields_8" cols="110" rows="5"></textarea>
+      </div>
+      <div class="form-group">
+        <label></label>
+        <label style="font-size: 12px" class="required">Conduta Médica</label>
+      </div>
+      <div class="form-group">
+        <label></label>
+        <textarea id="formFields_8" cols="110" rows="5"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label></label>
+        <label class="required p1" style="margin-top: 30px;">CID 1</label>
+        <input clrInput name="input" size="85" />
+      </div>
+
+      <div class="form-group">
+        <label></label>
+        <label class="required p1" style="margin-top: 30px;">CID 2</label>
+        <input clrInput name="input" size="85" />
+      </div>
+
+    </form>
+    <button class="btn btn-primary" disabled>Salvar</button>
+  </section>
+  <br><br>
+  <section>
+    <form clrForm clrLayout="vertical">
+      <br>
+    </form>

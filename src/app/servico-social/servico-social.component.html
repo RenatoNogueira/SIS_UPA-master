@@ -1,0 +1,35 @@
+<app-cabecalho-detalhe-medico></app-cabecalho-detalhe-medico>
+
+<clr-tabs>
+
+  <clr-tab>
+    <button clrTabLink (click)="Recepcao()">Recepção</button>
+    <ng-template>
+      <clr-tab-content>
+        ...
+      </clr-tab-content>
+    </ng-template>
+  </clr-tab>
+
+  <clr-tab>
+    <button clrTabLink (click)="Social()">Social</button>
+    <ng-template>
+      <clr-tab-content>
+        ...
+      </clr-tab-content>
+    </ng-template>
+  </clr-tab>
+
+  <clr-tab>
+    <button clrTabLink>Concluir Consulta</button>
+    <ng-template>
+      <clr-tab-content>
+        ...
+      </clr-tab-content>
+    </ng-template>
+  </clr-tab>
+</clr-tabs>
+<br><br><br>
+
+<app-social-form *ngIf="social"></app-social-form>
+<app-recepcao-form *ngIf="recepcao"></app-recepcao-form>

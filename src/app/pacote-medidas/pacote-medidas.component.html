@@ -1,13 +1,12 @@
-<b _ngcontent-c19="">Pacote de Medidas</b>
-<hr _ngcontent-c19="">
+<b>Pacote de Medidas</b>
+<hr>
 
 <label>Exames do Kit Sepse</label>
 <clr-checkbox-wrapper>
-  <input type="checkbox" clrCheckbox name="option1" required value="option1" (change)="todos($event)" />
+  <input type="checkbox" clrCheckbox name="KitSepse" required value="KitSepse" (change)="kitSepse($event)" />
   <label class="p5">Marcar todos os campos </label>
 </clr-checkbox-wrapper>
 
-<!-- topo | direita | inferior | esquerda */-->
 <form clrForm clrLayout="vertical" style="margin: 0 1em 0 180px;">
   <form class="clr-control-inline">
     <clr-checkbox-container style="margin-right: 100px;">
@@ -88,12 +87,10 @@
 </form>
 <br>
 
-
 <label>Prescrição de Antibiótico</label>
 <br>
 <form style="margin-left: 9%">
   <label><u>Foco Abdominal</u></label>
-  <!-- topo | direita | inferior | esquerda */-->
   <form clrForm clrLayout="vertical" style="margin: 0 6em 0 0;">
     <form class="clr-control-inline">
       <clr-checkbox-container style="margin-right: 10%;">
@@ -128,19 +125,19 @@
     <br>
   </form>
 
-
   <label><u>Foco Partes Moles</u></label>
-  <!-- topo | direita | inferior | esquerda */-->
   <form clrForm clrLayout="vertical" style="margin: 0 0.6em 0 0;">
     <form class="clr-control-inline">
       <clr-checkbox-container style="margin-right: 12%;">
         <clr-checkbox-wrapper>
           <input type="checkbox" clrCheckbox name="options1" required value="option1" />
-          <label>Ceftriaxona 1g</label>
+          <label>Ceftriaxona 1g
+          </label>
         </clr-checkbox-wrapper>
         <clr-checkbox-wrapper>
           <input type="checkbox" clrCheckbox name="options2" required value="option2" />
-          <label>Clindimicina 600mg</label>
+          <label>Clindimicina 600mg
+          </label>
         </clr-checkbox-wrapper>
       </clr-checkbox-container>
       <clr-checkbox-container>
@@ -157,7 +154,7 @@
     <br>
   </form>
   <label><u>Foco Pulmonar</u></label>
-  <!-- topo | direita | inferior | esquerda */-->
+
   <form clrForm clrLayout="vertical" style="margin: 0 1em 0 0;">
     <form class="clr-control-inline">
       <clr-checkbox-container style="margin-right: 12%;">
@@ -184,7 +181,7 @@
     <br>
   </form>
   <label><u>Foco Urinário</u></label>
-  <!-- topo | direita | inferior | esquerda */-->
+
   <form clrForm clrLayout="vertical" style="margin: 0 1em 0 0;">
     <form class="clr-control-inline">
       <clr-checkbox-container style="margin-right: 10%;">
@@ -212,4 +209,31 @@
     <button class="btn btn-primary">Imprimir</button>
   </form>
 </form>
+
 <br>
+
+<label>Expansão Volêmica</label>
+<hr>
+<div class="clr-form-control">
+  <div class="clr-control-container" style="margin-left: 9%">
+
+    <div class="clr-checkbox-wrapper">
+      <input clrcheckbox="" name="test2" type="checkbox" value="option2" id="clr-form-control-1" />
+      <label class="clr-control-label" for="clr-form-control-1">Soro Fisiológico 0,9% 500ml &nbsp;&nbsp;&nbsp;&nbsp;
+        Etapa:<input type="text" id="basic" placeholder="1 - 4" class="clr-input" size="4" /></label>
+    </div>
+
+    <div class="clr-checkbox-wrapper">
+      <input clrcheckbox="" name="test3" type="checkbox" value="option3" id="clr-form-control-2" />
+      <label class="clr-control-label" for="clr-form-control-2">Ringer Simples 500ml &nbsp;&nbsp;&nbsp;&nbsp;
+        Etapa:<input type="text" id="basic" placeholder="1 - 4" class="clr-input" size="4" /></label>
+    </div>
+
+    <div class="clr-checkbox-wrapper">
+      <input clrcheckbox="" name="test4" type="checkbox" value="option4" id="clr-form-control-77" />
+      <label class="clr-control-label" for="clr-form-control-77">Ringer Lactato 500ml &nbsp;&nbsp;&nbsp;&nbsp;
+        Etapa:<input type="text" id="basic" placeholder="1 - 4" class="clr-input" size="4" /></label>
+    </div>
+
+  </div>
+</div>

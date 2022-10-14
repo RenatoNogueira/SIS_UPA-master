@@ -1,305 +1,212 @@
-<div _ngcontent-c19="" style="padding: 1em 0" class="ng-star-inserted">
-  <b _ngcontent-c19="">Histórico de Atendimentos</b>
-  <button _ngcontent-c19="" class="btn btn-default btn-sm" style="display: block" (click)="exibir()">Exibir</button>
+<div style="padding: 1em 0" class="ng-star-inserted">
+  <b>Histórico de Atendimentos</b>
+  <button class="btn btn-default btn-sm" style="display: block" (click)="exibir()">Exibir</button>
 
   <app-historico-atendimento *ngIf="hAtendimento"></app-historico-atendimento>
-
 </div>
-
-<div _ngcontent-c19="" class="ng-star-inserted">
-  <b _ngcontent-c19="">Detalhes da Classificação de Risco</b>
-  <button _ngcontent-c19="" class="btn btn-default btn-sm" style="display: block">Exibir</button>
+<div class="ng-star-inserted">
+  <b>Detalhes da Classificação de Risco</b>
+  <button class="btn btn-default btn-sm" style="display: block">Exibir</button>
 </div>
 <br>
 
-<form>
-
-  <!-- <b _ngcontent-c19="">Sinais Vitais</b>-->
+<app-sinais-vitais></app-sinais-vitais>
+<br>
+<section>
+  <b>Avaliação Médica</b>
   <hr>
-
-  <section class="form-block p1" formGroupName="Avaliacao">
-
-    <div class="form-group"> <label class="p1 required">Sinais Vitais:</label>
-      <label class="p1" for="peso_aproximado">Temperatura</label>
-      <input mask="0*,000" type="text" placeholder="°C" id="peso_aproximado" size="8" formControlName="peso_aproximado">
-      <span>
-        <small>°C</small>
-      </span>
-      <label for="pressao_art" class="p1">Pressão Arterial</label>
-      <input mask="000/000" dropSpecialCharacters="false" type="text" placeholder="mmHg" id="pressao_art" size="6"
-        formControlName="pressao_art">
-      <span>
-        <small>mmHg</small>
-      </span>
-      <label for="pulso" class="p1">Pulso</label>
-      <input mask="000" type="text" placeholder="bmp" id="pulso" size="3" formControlName="pulso">
-      <span>
-        <small>bpm</small>
-      </span>
-      <label for="sato" class="p1">SpO²</label>
-      <input mask="000" type="text" placeholder="%" id="sato" size="3" formControlName="sato">
-      <span>
-        <small>%</small>
-      </span>
-    </div>
-    <div class="form-group"><label></label>
-      <label for="sato" class="p1">SAT O²</label>
-      <input mask="000" type="text" placeholder="%" id="sato" size="3" formControlName="sato">
-      <span>
-        <small>SPO²</small>
-      </span>
-      <label for="frequencia_respiratoria" class="p1">Frequência Respiratória</label>
-      <input autocomplete="off" mask="00" type="text" placeholder="rpm" id="frequencia_respiratoria" size="2"
-        formControlName="frequencia_respiratoria">
-      <span>
-        <small>rpm</small>
-      </span>
-      <label for="nivel_consciencia" class="p1">Nível de Consciência</label>
-      <div class="select">
-        <select id="nivel_consciencia" formControlName="nivel_consciencia">
-          <option></option>
-          <option>Alerta</option>
-          <option>Resposta verbal</option>
-          <option>Dor</option>
-          <option>Não responsivel</option>
-          <option>Confuso</option>
-        </select>
-      </div>
-      <label for="frequencia_respiratoria" class="p1">Oligúria(≥0,5ml/kg/h)</label>
-
-
-      <clr-checkbox-wrapper clrInline>
-        <input type="checkbox" clrCheckbox name="options1" required value="option1" />
-        <label>Sim &nbsp; &nbsp;</label>
-      </clr-checkbox-wrapper>
-      <clr-checkbox-wrapper clrInline>
-        <input type="checkbox" clrCheckbox name="options1" required value="option1" />
-        <label>Não</label>
-      </clr-checkbox-wrapper>
-    </div>
-
-  </section>
-  <section class="form-block">
-    <div class="form-group">
-      <label></label>
-      <span class="label label-danger p1">
-        Risco Alto de Sepse -
-        <span class="badge p1">Valor: 9</span>
-      </span>
-    </div>
-  </section>
-
-
   <br>
-
-
-  <section>
-    <b _ngcontent-c19="">Avaliação Médica</b>
-    <hr _ngcontent-c19="">
-    <!-- topo | direita | inferior | esquerda */--><br>
-    <form clrForm clrLayout="vertical" style="margin: 2px 1em 0 180px;">
-      <section>
-        <form class="clr-control-inline">
-          <label><b style="margin-right: 10px;">Paciente apresenta história sugestiva de infecção?</b></label>
-          <div class="clr-control-inline">
-            <div class="clr-checkbox-wrapper">
-              <input type="checkbox" id="infeccao-s" name="infeccao-s" value="infeccao-s" class="clr-checkbox" />
-              <label for="infeccao-s" class="clr-control-label" (click)="mostraAvaliacaoMedica()">Sim</label>
-            </div>
-            <div class="clr-checkbox-wrapper">
-              <input type="checkbox" id="infeccao-n" name="infeccao-n" value="infeccao-n" class="clr-checkbox" />
-              <label for="infeccao-n" class="clr-control-label">Não</label>
-            </div>
-          </div>
-        </form>
-      </section>
-
-      <form class="clr-control-inline" *ngIf="mostrarAvaliacaoMedica">
-        <label>Caso SIM, qual o possível foco?</label>
-        <clr-checkbox-container>
-          <clr-checkbox-wrapper>
-            <input type="checkbox" clrCheckbox name="options1" required value="option1" />
-            <label>Endorcardite</label>
-          </clr-checkbox-wrapper>
-          <clr-checkbox-wrapper>
-            <input type="checkbox" clrCheckbox name="options2" required value="option2" />
-            <label>Infecção abdominal aguda</label>
-          </clr-checkbox-wrapper>
-          <clr-checkbox-wrapper>
-            <input type="checkbox" clrCheckbox name="options2" required value="option2" />
-            <label>Infecção de corrente sanguínea associada ao cateter</label>
-          </clr-checkbox-wrapper>
-          <clr-checkbox-wrapper>
-            <input type="checkbox" clrCheckbox name="options2" required value="option2" />
-            <label>Infecção de ferida operatória</label>
-          </clr-checkbox-wrapper>
-          <clr-checkbox-wrapper>
-            <input type="checkbox" clrCheckbox name="options2" required value="option2" />
-            <label>Infecção de prótese</label>
-          </clr-checkbox-wrapper>
-          <clr-checkbox-wrapper>
-            <input type="checkbox" clrCheckbox name="options2" required value="option2" />
-            <label>Infecção óssea/articular</label>
-          </clr-checkbox-wrapper>
-        </clr-checkbox-container>
-        <clr-checkbox-container>
-          <clr-checkbox-wrapper>
-            <input type="checkbox" clrCheckbox name="options1" required value="option1" />
-            <label>Infecção urinária</label>
-          </clr-checkbox-wrapper>
-          <clr-checkbox-wrapper>
-            <input type="checkbox" clrCheckbox name="options2" required value="option2" />
-            <label>Meningite</label>
-          </clr-checkbox-wrapper>
-          <clr-checkbox-wrapper>
-            <input type="checkbox" clrCheckbox name="options2" required value="option2" />
-            <label>Pele e partes moles</label>
-          </clr-checkbox-wrapper>
-          <clr-checkbox-wrapper>
-            <input type="checkbox" clrCheckbox name="options2" required value="option2" />
-            <label>Pneumonia/ Empiema</label>
-          </clr-checkbox-wrapper>
-          <clr-checkbox-wrapper>
-            <input type="checkbox" clrCheckbox name="options2" required value="option2" />
-            <label>Outras</label>
-          </clr-checkbox-wrapper>
-        </clr-checkbox-container>
-      </form>
-
-      <br>
-
-      <form clrLayout="horizontal" class="clr-control-inline" *ngIf="mostrarAvaliacaoMedica">
-        <label><b style="margin-right: 10px;">Iniciar Protocolo de SEPSE? *</b> </label>
-        <div class="clr-control-container clr-control-inline">
-          <div class="clr-checkbox-wrapper">
-            <input type="checkbox" id="vertical-checkbox1" name="checkbox-inline-1" value="option1" class="clr-checkbox"
-              (click)="mostrarPacoteMedidas()" />
-            <label for="vertical-checkbox1" class="clr-control-label">Sim</label>
-          </div>
-          <div class="clr-checkbox-wrapper">
-            <input type="checkbox" id="vertical-checkbox2" name="checkbox-inline-2" value="option2"
-              class="clr-checkbox" />
-            <label for="vertical-checkbox2" class="clr-control-label">Não</label>
-          </div>
-        </div>
-      </form>
-
-    </form>
-  </section>
-
-  <br>
-  <app-pacote-medidas *ngIf="mostraPacoteMedidas">></app-pacote-medidas>
-
-  <br><br>
-  <section>
-    <b _ngcontent-c19="">Anamnese</b>
-    <hr _ngcontent-c19="">
-    <form clrForm clrLayout="vertical">
-      <div class="form-group">
-        <label></label>
-        <label style="font-size: 12px" class="required">História da Doença Atual</label>
-      </div>
-      <div class="form-group">
-        <label></label>
-        <textarea id="formFields_8" cols="110" rows="5"></textarea>
-      </div>
-      <div class="form-group">
-        <label></label>
-        <label style="font-size: 12px" class="required">Exame Físico</label>
-      </div>
-      <div class="form-group">
-        <label></label>
-        <textarea id="formFields_8" cols="110" rows="5"></textarea>
-      </div>
-      <div class="form-group">
-        <label></label>
-        <label style="font-size: 12px" class="required">Hipótese do Diagnóstico</label>
-      </div>
-      <div class="form-group">
-        <label></label>
-        <textarea id="formFields_8" cols="110" rows="5"></textarea>
-      </div>
-      <div class="form-group">
-        <label></label>
-        <label style="font-size: 12px" class="required">Conduta Médica</label>
-      </div>
-      <div class="form-group">
-        <label></label>
-        <textarea id="formFields_8" cols="110" rows="5"></textarea>
-      </div>
-
-      <div class="form-group">
-        <label></label>
-        <label class="required p1" style="margin-top: 30px;">CID 1</label>
-        <input clrInput name="input" size="85" />
-      </div>
-
-      <div class="form-group">
-        <label></label>
-        <label class="required p1" style="margin-top: 30px;">CID 2</label>
-        <input clrInput name="input" size="85" />
-      </div>
-
-    </form>
-    <button class="btn btn-primary" disabled>Salvar</button>
-  </section>
-  <br>
-
-  <section>
-    <b>Reavaliação</b>
-    <hr _ngcontent-c19="">
-    <form clrForm clrLayout="vertical">
-      <br>
-      <div class="form-group">
-        <textarea id="formFields_8" cols="110" rows="5" placeholder="Informações Importantes"></textarea>
-      </div>
-      <br>
-      <fieldset>
-        <clr-stack-view>
-          <clr-stack-block>
-            <clr-stack-label>Sexta-Feira - 26/08/2022 15:19:58</clr-stack-label>
-            <clr-stack-block>
-              <clr-stack-label>Profissional</clr-stack-label>
-              <clr-stack-content>ILDENÊ RODRIGUES MORAES</clr-stack-content>
-            </clr-stack-block>
-            <clr-stack-block>
-              <clr-stack-label>Descrição</clr-stack-label>
-              <clr-stack-content>ILDENÊ RODRIGUES MORAES</clr-stack-content>
-            </clr-stack-block>
-          </clr-stack-block>
-        </clr-stack-view>
-
-        <clr-stack-view>
-          <clr-stack-block>
-            <clr-stack-label>Sexta-Feira - 26/08/2022 15:19:58</clr-stack-label>
-            <clr-stack-block>
-              <clr-stack-label>Profissional</clr-stack-label>
-              <clr-stack-content>ILDENÊ RODRIGUES MORAES</clr-stack-content>
-            </clr-stack-block>
-            <clr-stack-block>
-              <clr-stack-label>Descrição</clr-stack-label>
-              <clr-stack-content>ILDENÊ RODRIGUES MORAES</clr-stack-content>
-            </clr-stack-block>
-
-          </clr-stack-block>
-        </clr-stack-view>
-      </fieldset>
-      <br>
-      <form class="clr-control-inline" style="margin: 2px 1em 0 180px;">
-        <label><b style="margin-right: 10px;">SEPSE Confirmado?</b></label>
+  <form clrForm clrLayout="vertical" style="margin: 2px 1em 0 180px;">
+    <section>
+      <form class="clr-control-inline">
+        <label><b style="margin-right: 10px;">Paciente apresenta história sugestiva de infecção?</b></label>
         <div class="clr-control-inline">
           <div class="clr-checkbox-wrapper">
-            <input type="checkbox" id="sepseconfirmado-s" name="sepseconfirmado-s" value="sepseconfirmado-s"
-              class="clr-checkbox" />
-            <label for="sepseconfirmado-s" class="clr-control-label">Sim</label>
+            <input type="checkbox" id="infeccao-s" name="infeccao-s" value="infeccao-s" class="clr-checkbox" />
+            <label for="infeccao-s" class="clr-control-label" (click)="mostraAvaliacaoMedica()">Sim</label>
           </div>
           <div class="clr-checkbox-wrapper">
-            <input type="checkbox" id="sepseconfirmado-n" name="sepseconfirmado-n" value="sepseconfirmado-n"
-              class="clr-checkbox" />
-            <label for="sepseconfirmado-n" class="clr-control-label">Não</label>
+            <input type="checkbox" id="infeccao-n" name="infeccao-n" value="infeccao-n" class="clr-checkbox" />
+            <label for="infeccao-n" class="clr-control-label">Não</label>
           </div>
         </div>
       </form>
+    </section>
+
+    <form class="clr-control-inline" *ngIf="mostrarAvaliacaoMedica">
+      <label>Caso SIM, qual o possível foco?</label>
+      <clr-checkbox-container>
+        <clr-checkbox-wrapper>
+          <input type="checkbox" clrCheckbox name="options1" required value="option1" />
+          <label>Endorcardite</label>
+        </clr-checkbox-wrapper>
+        <clr-checkbox-wrapper>
+          <input type="checkbox" clrCheckbox name="options2" required value="option2" />
+          <label>Infecção abdominal aguda</label>
+        </clr-checkbox-wrapper>
+        <clr-checkbox-wrapper>
+          <input type="checkbox" clrCheckbox name="options2" required value="option2" />
+          <label>Infecção de corrente sanguínea associada ao cateter</label>
+        </clr-checkbox-wrapper>
+        <clr-checkbox-wrapper>
+          <input type="checkbox" clrCheckbox name="options2" required value="option2" />
+          <label>Infecção de ferida operatória</label>
+        </clr-checkbox-wrapper>
+        <clr-checkbox-wrapper>
+          <input type="checkbox" clrCheckbox name="options2" required value="option2" />
+          <label>Infecção de prótese</label>
+        </clr-checkbox-wrapper>
+        <clr-checkbox-wrapper>
+          <input type="checkbox" clrCheckbox name="options2" required value="option2" />
+          <label>Infecção óssea/articular</label>
+        </clr-checkbox-wrapper>
+      </clr-checkbox-container>
+      <clr-checkbox-container>
+        <clr-checkbox-wrapper>
+          <input type="checkbox" clrCheckbox name="options1" required value="option1" />
+          <label>Infecção urinária</label>
+        </clr-checkbox-wrapper>
+        <clr-checkbox-wrapper>
+          <input type="checkbox" clrCheckbox name="options2" required value="option2" />
+          <label>Meningite</label>
+        </clr-checkbox-wrapper>
+        <clr-checkbox-wrapper>
+          <input type="checkbox" clrCheckbox name="options2" required value="option2" />
+          <label>Pele e partes moles</label>
+        </clr-checkbox-wrapper>
+        <clr-checkbox-wrapper>
+          <input type="checkbox" clrCheckbox name="options2" required value="option2" />
+          <label>Pneumonia/ Empiema</label>
+        </clr-checkbox-wrapper>
+        <clr-checkbox-wrapper>
+          <input type="checkbox" clrCheckbox name="options2" required value="option2" />
+          <label (click)="outra()">Outras</label>
+        </clr-checkbox-wrapper>
+      </clr-checkbox-container>
+      <clr-textarea-container *ngIf="outras">
+        <label>Avaliação Médica Outras</label>
+        <textarea clrTextarea name="description" cols="50" required></textarea>
+      </clr-textarea-container>
     </form>
-    <button class="btn btn-primary" disabled>Salvar</button>
-  </section>
+
+    <br>
+
+    <form clrLayout="horizontal" class="clr-control-inline" *ngIf="mostrarAvaliacaoMedica">
+      <label><b style="margin-right: 10px;">Iniciar Protocolo de SEPSE? *</b> </label>
+      <div class="clr-control-container clr-control-inline">
+        <div class="clr-checkbox-wrapper">
+          <input type="checkbox" id="vertical-checkbox1" name="checkbox-inline-1" value="option1" class="clr-checkbox"
+            (click)="mostrarPacoteMedidas()" />
+          <label for="vertical-checkbox1" class="clr-control-label">Sim</label>
+        </div>
+        <div class="clr-checkbox-wrapper">
+          <input type="checkbox" id="vertical-checkbox2" name="checkbox-inline-2" value="option2"
+            class="clr-checkbox" />
+          <label for="vertical-checkbox2" class="clr-control-label">Não</label>
+        </div>
+      </div>
+    </form>
+
+  </form>
+</section>
+
+<br>
+<app-pacote-medidas *ngIf="mostraPacoteMedidas">></app-pacote-medidas>
+
+<br><br>
+<section>
+  <b>Anamnese</b>
+  <hr>
+  <form clrForm clrLayout="vertical">
+    <div class="form-group">
+      <label></label>
+      <label style="font-size: 12px" class="required">História da Doença Atual</label>
+    </div>
+    <div class="form-group">
+      <label></label>
+      <textarea id="formFields_8" cols="110" rows="5"></textarea>
+    </div>
+    <div class="form-group">
+      <label></label>
+      <label style="font-size: 12px" class="required">Exame Físico</label>
+    </div>
+    <div class="form-group">
+      <label></label>
+      <textarea id="formFields_8" cols="110" rows="5"></textarea>
+    </div>
+    <div class="form-group">
+      <label></label>
+      <label style="font-size: 12px" class="required">Hipótese do Diagnóstico</label>
+    </div>
+    <div class="form-group">
+      <label></label>
+      <textarea id="formFields_8" cols="110" rows="5"></textarea>
+    </div>
+    <div class="form-group">
+      <label></label>
+      <label style="font-size: 12px" class="required">Conduta Médica</label>
+    </div>
+    <div class="form-group">
+      <label></label>
+      <textarea id="formFields_8" cols="110" rows="5"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label></label>
+      <label class="required p1" style="margin-top: 30px;">CID 1</label>
+      <input clrInput name="input" size="85" />
+    </div>
+
+    <div class="form-group">
+      <label></label>
+      <label class="required p1" style="margin-top: 30px;">CID 2</label>
+      <input clrInput name="input" size="85" />
+    </div>
+
+  </form>
+  <button class="btn btn-primary" disabled>Salvar</button>
+</section>
+<br>
+
+<section>
+  <b>Reavaliação</b>
+  <hr>
+  <form clrForm clrLayout="vertical">
+    <br>
+    <div class="form-group">
+      <textarea id="formFields_8" cols="110" rows="5" placeholder="Informações Importantes"></textarea>
+    </div>
+    <br>
+    <form class="clr-control-inline" style="margin: 2px 1em 0 180px;">
+      <label><b style="margin-right: 10px;">SEPSE Confirmado?</b></label>
+      <div class="clr-control-inline">
+        <div class="clr-checkbox-wrapper">
+          <input type="checkbox" id="sepseconfirmado-s" name="sepseconfirmado-s" value="sepseconfirmado-s"
+            class="clr-checkbox" />
+          <label for="sepseconfirmado-s" class="clr-control-label">Sim</label>
+        </div>
+        <div class="clr-checkbox-wrapper">
+          <input type="checkbox" id="sepseconfirmado-n" name="sepseconfirmado-n" value="sepseconfirmado-n"
+            class="clr-checkbox" />
+          <label for="sepseconfirmado-n" class="clr-control-label">Não</label>
+        </div>
+      </div>
+    </form>
+  </form>
+</section>
+
+<br><br>
+
+<clr-dropdown>
+  <button class="btn btn-primary" clrDropdownTrigger>
+    Desfecho
+    <cds-icon shape="angle" direction="up"></cds-icon>
+  </button>
+  <clr-dropdown-menu clrPosition="top-left" *clrIfOpen>
+    <label class="dropdown-header" aria-hidden="true">Selecionar</label>
+    <div class="dropdown-divider" role="separator" aria-hidden="true"></div>
+    <div clrDropdownItem>Alta hospitalar</div>
+    <div clrDropdownItem>Óbito</div>
+    <div clrDropdownItem>Trasnferência/Internação</div>
+  </clr-dropdown-menu>
+</clr-dropdown>

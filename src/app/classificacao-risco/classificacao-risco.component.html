@@ -7,7 +7,7 @@
   </clr-alert-item>
 </clr-alert>
 <br>
-<!-- CLASSIFICAÇÃO DE RISCO -->
+
 <form clrForm>
   <label class="font-form">Classificação de Risco</label>
   <hr />
@@ -27,15 +27,16 @@
     <label class="p3">Nome ou Nome Social:*</label>
     <input clrInput type="text" size="60" name="example" placeholder="Nome ou Nome Social" />
   </clr-input-container>
-  <!-- Colocar no lugar -->
+
   <clr-checkbox-container clrInline>
     <clr-checkbox-wrapper class="social-name">
       <input type="checkbox" clrCheckbox name="options1" required value="option1" />
       <label>Não identificado</label>
     </clr-checkbox-wrapper>
   </clr-checkbox-container>
-  <!-- -->
+</form>
 
+<form clrForm>
   <label></label>
   <clr-checkbox-container clrInline>
     <label class="p3">Atendimento</label>
@@ -49,9 +50,12 @@
       <label>Serviço Social</label>
     </clr-checkbox-wrapper>
   </clr-checkbox-container>
+</form>
+
+<form clrForm>
   <label></label>
   <clr-checkbox-container clrInline>
-    <label class=" p3">Especialidade para Atendimento *</label>
+    <label class="p3">Especialidade para Atendimento *</label>
     <clr-checkbox-wrapper>
       <input type="checkbox" clrCheckbox name="options1" value="option1" />
       <label>Clínica Médica</label>
@@ -74,20 +78,15 @@
 </form>
 <br>
 
-
-<!-- -->
-
 <form clrForm>
   <clr-select-container>
-    <label class="p3">Causa Extrena:* </label>
+    <label class="p3">Causa Extrema:* </label>
     <select clrSelect name="CausaExtrema" (ngModel)="causaExtrema">
       <option></option>
-      <!---->
       <option *ngFor="let causaExtrema of CausaExtrema" (ngValue)="causaExtrema">{{ causaExtrema }}</option>
     </select>
   </clr-select-container>
 </form>
-<!-- -->
 
 <form clrForm>
   <clr-textarea-container>
@@ -201,7 +200,7 @@
 <form clrForm *ngIf="emergencia">
   <label></label>
   <clr-checkbox-container clrInline>
-    <label class="font-form p3">Escala de Glasgow:</label>
+    <label class="p3-font">Escala de Glasgow:</label>
   </clr-checkbox-container>
   <hr />
   <clr-select-container>
@@ -236,7 +235,7 @@
 
 <br>
 
-<section class="escala-glasgow">
+<section class="escala-glasgow" *ngIf="emergencia">
   <label></label>
   <label class="p2">Escala de Coma Glasgow: /15</label>
 </section>
@@ -263,8 +262,8 @@
 </form>
 <br><br>
 <section>
-  <label>Outras Informações:</label>
-  <hr _ngcontent-c19="" />
+  <label class="p3-font">Outras Informações:</label>
+  <hr />
   <form clrForm>
     <clr-textarea-container>
       <label></label>
@@ -274,7 +273,7 @@
 
   <br /><br />
 
-  <label>Classificação de Risco</label>
+  <label class="p3-font">Classificação de Risco</label>
   <hr>
   <clr-radio-container clrInline="horizontal">
     <label>

@@ -1,0 +1,101 @@
+<div _ngcontent-c19="" style="padding: 1em 0" class="ng-star-inserted">
+  <b _ngcontent-c19="">Histórico de Atendimentos</b>
+  <button _ngcontent-c19="" class="btn btn-default btn-sm" style="display: block" (click)="exibir()">Exibir</button>
+
+  <app-historico-atendimento *ngIf="hAtendimento"></app-historico-atendimento>
+
+</div>
+
+<div _ngcontent-c19="" class="ng-star-inserted">
+  <b _ngcontent-c19="">Detalhes da Classificação de Risco</b>
+  <button _ngcontent-c19="" class="btn btn-default btn-sm" style="display: block">Exibir</button>
+</div>
+<br>
+
+<form>
+
+  <app-sinais-vitais></app-sinais-vitais>
+  <br>
+
+  <section>
+    <form clrForm clrLayout="vertical" style="margin: 2px 1em 0 180px;">
+      <form clrLayout="horizontal" class="clr-control-inline">
+        <label><b style="margin-right: 10px;">Iniciar Protocolo de SEPSE? *</b> </label>
+        <div class="clr-control-container clr-control-inline">
+          <div class="clr-checkbox-wrapper">
+            <input type="checkbox" id="vertical-checkbox1" name="checkbox-inline-1" value="option1"
+              class="clr-checkbox" />
+            <label for="vertical-checkbox1" class="clr-control-label">Sim</label>
+          </div>
+          <div class="clr-checkbox-wrapper">
+            <input type="checkbox" id="vertical-checkbox2" name="checkbox-inline-2" value="option2"
+              class="clr-checkbox" />
+            <label for="vertical-checkbox2" class="clr-control-label">Não</label>
+          </div>
+        </div>
+      </form>
+
+    </form>
+  </section>
+
+  <br>
+
+  <section>
+    <b class="p3-font">Anamnese</b>
+    <hr>
+    <form clrForm clrLayout="vertical">
+      <div class="form-group">
+        <label></label>
+        <label style="font-size: 12px" class="required">História da Doença Atual</label>
+      </div>
+      <div class="form-group">
+        <label></label>
+        <textarea id="formFields_8" cols="110" rows="5"></textarea>
+      </div>
+      <div class="form-group">
+        <label></label>
+        <label style="font-size: 12px" class="required">Exame Físico</label>
+      </div>
+      <div class="form-group">
+        <label></label>
+        <textarea id="formFields_8" cols="110" rows="5"></textarea>
+      </div>
+      <div class="form-group">
+        <label></label>
+        <label style="font-size: 12px" class="required">Hipótese do Diagnóstico</label>
+      </div>
+      <div class="form-group">
+        <label></label>
+        <textarea id="formFields_8" cols="110" rows="5"></textarea>
+      </div>
+      <div class="form-group">
+        <label></label>
+        <label style="font-size: 12px" class="required">Conduta Médica</label>
+      </div>
+      <div class="form-group">
+        <label></label>
+        <textarea id="formFields_8" cols="110" rows="5"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label></label>
+        <label class="required p1" style="margin-top: 30px;">CID 1</label>
+        <input clrInput name="input" size="85" />
+      </div>
+
+      <div class="form-group">
+        <label></label>
+        <label class="required p1" style="margin-top: 30px;">CID 2</label>
+        <input clrInput name="input" size="85" />
+      </div>
+
+    </form>
+    <button class="btn btn-primary" disabled>Salvar</button>
+  </section>
+  <br><br>
+
+  <section>
+    <form clrForm clrLayout="vertical">
+
+      <br>
+    </form>

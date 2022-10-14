@@ -7,33 +7,36 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./pacote-medidas.component.scss'],
 })
 export class PacoteMedidasComponent implements OnInit {
-  ceftriaxona = false;
-  ciprofloxacino = false;
-  metronidazol = false;
-  piperacilina = false;
   constructor() {}
   ngOnInit(): void {
     imports: [FormsModule];
   }
 
+  /* Foco Abdominal */
+  ceftriaxona = false;
   Ceftriaxona(): void {
     this.ceftriaxona = !this.ceftriaxona;
   }
-
+  ciprofloxacino = false;
   Ciprofloxacino(): void {
     this.ciprofloxacino = !this.ciprofloxacino;
   }
-
+  metronidazol = false;
   Metronidazol(): void {
     this.metronidazol = !this.metronidazol;
   }
-
+  piperacilina = false;
   Piperacilina(): void {
     this.piperacilina = !this.piperacilina;
   }
+  /* Foco Partes Moles */
+
+  /* Foco Pulmonar */
+
+  /* Foco Urinário */
 
   checks = false;
-  todos(e: any) {
+  kitSepse(e: any) {
     if (e.target.checked == true) {
       this.checks = true;
     } else {
