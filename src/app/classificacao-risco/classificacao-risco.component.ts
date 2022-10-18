@@ -6,10 +6,6 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrls: ['./classificacao-risco.component.scss'],
 })
 export class ClassificacaoRiscoComponent implements OnInit {
-  emergencia = true;
-  outrasDoencas = false;
-  medUso = false;
-  alergia = false;
   // campo Causa Extrema:*
   CausaExtrema: string[] = [
     'Acidente de Trabalho',
@@ -71,18 +67,19 @@ export class ClassificacaoRiscoComponent implements OnInit {
   ngOnInit(): void {
     imports: [FormsModule, NgForm];
   }
+  emergencia = true;
   mostraEmergencia(): void {
     this.emergencia = !this.emergencia;
   }
-
+  outrasDoencas = false;
   outras(): void {
     this.outrasDoencas = !this.outrasDoencas;
   }
-
+  medUso = false;
   medicamentoEmUso(): void {
     this.medUso = !this.medUso;
   }
-
+  alergia = false;
   medAlergia(): void {
     this.alergia = !this.alergia;
   }
@@ -102,6 +99,24 @@ export class ClassificacaoRiscoComponent implements OnInit {
       this.disabled = !this.disabled;
     } else {
       this.disabled = true;
+    }
+  }
+
+  disabledEmer = false;
+  buttonEmergencia(e: any) {
+    if (e.target.disabled == false) {
+      this.disabledEmer = !this.disabledEmer;
+    } else {
+      this.disabledEmer = false;
+    }
+  }
+
+  disabledeSoc = false;
+  buttonServSocial(e: any) {
+    if (e.target.disabled == false) {
+      this.disabledeSoc = !this.disabledeSoc;
+    } else {
+      this.disabledeSoc = false;
     }
   }
 }

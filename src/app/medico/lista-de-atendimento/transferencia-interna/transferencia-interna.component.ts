@@ -6,12 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./transferencia-interna.component.scss'],
 })
 export class TransferenciaInternaComponent implements OnInit {
-  procedimento = false;
-  transfInter = false;
   constructor() {}
+  procedimento = false;
   procedimentoSelect(): void {
     this.procedimento = !this.procedimento;
   }
+  transfInter = false;
   transfInterna(): void {
     this.transfInter = !this.transfInter;
   }

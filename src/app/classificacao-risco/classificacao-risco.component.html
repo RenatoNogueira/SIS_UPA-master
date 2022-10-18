@@ -42,16 +42,16 @@
     <label class="p3">Atendimento</label>
     <clr-checkbox-wrapper>
       <input type="checkbox" clrCheckbox name="options1" value="option1" (click)="mostraEmergencia()"
-        (change)="emergenciaSelect($event); button($event)" />
+        (change)="emergenciaSelect($event); button($event); buttonEmergencia($event)" [disabled]="disabledeSoc" />
       <label><span class="color_emergencia">Emergência</span></label>
     </clr-checkbox-wrapper>
     <clr-checkbox-wrapper>
-      <input type="checkbox" clrCheckbox name="servico-social" value="option1" (click)="mostraEmergencia()">
+      <input type="checkbox" clrCheckbox name="servico-social" value="option1" (click)="mostraEmergencia()"
+        (change)="buttonServSocial($event)" [disabled]="disabledEmer">
       <label>Serviço Social</label>
     </clr-checkbox-wrapper>
   </clr-checkbox-container>
 </form>
-
 <form clrForm>
   <label></label>
   <clr-checkbox-container clrInline>

@@ -1,18 +1,66 @@
-.logo-group[_ngcontent-c11] {
+.logo-group {
   margin: 0 -50% 0 0;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 60%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  width: 45%;
-}
-
-div[_ngcontent-c11]>div[_ngcontent-c11]>span[_ngcontent-c11]>img[_ngcontent-c11] {
-  width: 83%;
+  width: 70%;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  -webkit-animation: fadein 2s;
+  -o-animation: fadein 2s;
 }
 
 img {
+  width: 70%;
   border-style: none;
   vertical-align: middle;
+}
+
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein {
+
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein {
+
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

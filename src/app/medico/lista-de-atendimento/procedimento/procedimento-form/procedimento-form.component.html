@@ -7,11 +7,12 @@
       <label class="p3">Imobilização Ortopédica?</label>
       <clr-checkbox-wrapper>
         <input type="checkbox" clrCheckbox name="imob-sim" value="imob-sim" (click)="imobilicacaoYes()"
-          [disabled]="disabled" />
+          (change)="buttonYes($event)" [disabled]="disabled" />
         <label>Sim</label>
       </clr-checkbox-wrapper>
       <clr-checkbox-wrapper>
-        <input type="checkbox" clrCheckbox name="imob-nao" value="imob-nao" (change)="button($event)" />
+        <input type="checkbox" clrCheckbox name="imob-nao" value="imob-nao" (change)="buttonNot($event)"
+          [disabled]="disable" />
         <label>Não</label>
       </clr-checkbox-wrapper>
     </clr-checkbox-container>

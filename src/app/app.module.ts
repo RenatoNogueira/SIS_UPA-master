@@ -1,21 +1,20 @@
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ClarityModule } from '@clr/angular';
 
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ClarityModule } from '@clr/angular';
+
 import { ClassificacaoRiscoComponent } from './classificacao-risco/classificacao-risco.component';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { ListagemPacientesAtendimentoComponent } from './listagem-pacientes-atendimento/listagem-pacientes-atendimento.component';
 import { ProntuarioMedicoComponent } from './prontuario-medico/prontuario-medico.component';
 import { DetalhesMedicoComponent } from './detalhes-medico/detalhes-medico.component';
 import { CabecalhoDetalheMedicoComponent } from './cabecalho-detalhe-medico/cabecalho-detalhe-medico.component';
-import { OpcoesCausaExternaComponent } from './opcoes-causa-externa/opcoes-causa-externa.component';
 import { PacoteMedidasComponent } from './pacote-medidas/pacote-medidas.component';
 import { ReavaliacaoComponent } from './reavaliacao/reavaliacao.component';
 import { CabecalhoVerdeComponent } from './cabecalho-verde/cabecalho-verde.component';
@@ -52,11 +51,9 @@ registerLocaleData(localePt);
     ClassificacaoRiscoComponent,
     HeaderComponent,
     SidebarComponent,
-    ListagemPacientesAtendimentoComponent,
     ProntuarioMedicoComponent,
     DetalhesMedicoComponent,
     CabecalhoDetalheMedicoComponent,
-    OpcoesCausaExternaComponent,
     PacoteMedidasComponent,
     ReavaliacaoComponent,
     CabecalhoVerdeComponent,

@@ -8,14 +8,20 @@ import { ClrSelectedState } from '@clr/angular';
   styleUrls: ['./procedimento-form.component.scss'],
 })
 export class ProcedimentoFormComponent implements OnInit {
-  acessoRapido = false;
-
   disabled = false;
-  button(e: any) {
+  buttonNot(e: any) {
     if (e.target.disabled == false) {
       this.disabled = !this.disabled;
     } else {
       this.disabled = false;
+    }
+  }
+  disable = false;
+  buttonYes(e: any) {
+    if (e.target.disabled == false) {
+      this.disable = !this.disable;
+    } else {
+      this.disable = false;
     }
   }
 
@@ -63,11 +69,10 @@ export class ProcedimentoFormComponent implements OnInit {
   constructor() {
     ɵBrowserAnimationBuilder;
   }
-
+  acessoRapido = false;
   toggle(): void {
     this.acessoRapido = !this.acessoRapido;
   }
-
   imobilizacaoOrtopedica = false;
   imobilicacaoYes(): void {
     this.imobilizacaoOrtopedica = !this.imobilizacaoOrtopedica;
@@ -76,5 +81,6 @@ export class ProcedimentoFormComponent implements OnInit {
   imobilicacaoNo(): void {
     this.imobilizacaoOrtopedicaNo = !this.imobilizacaoOrtopedicaNo;
   }
+
   ngOnInit(): void {}
 }

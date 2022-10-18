@@ -18,7 +18,6 @@ export class ProntuarioComponent implements OnInit {
     this.procedimento = false;
     this.Prontuario = false;
   }
-
   Prontuario = true;
   prontuario(): void {
     this.Prontuario = true;

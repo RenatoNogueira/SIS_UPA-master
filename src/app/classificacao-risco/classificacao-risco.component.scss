@@ -46,8 +46,9 @@
 }
 
 .color_emergencia {
-  color: #fff;
-  background: #ff0000;
+  border-top: 2px solid #d60505;
+  border-bottom: 2px solid #d60505;
+  border-radius: 10px 10px 10px 10px;
   padding: 2px;
   margin-top: -9px;
   padding-left: 5px;
