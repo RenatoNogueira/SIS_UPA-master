@@ -20,7 +20,7 @@ export class SuspeitaDeSepseComponent implements OnInit {
   ];
   lista = [
     {
-      numeroproto: '402208150003',
+      numeroProto: '402208150003',
       paciente: 'JÉSSICA COSTA MENDES',
       especialidade: 'Clinica Médica',
       situacao: 'Suspeita de Sepse',

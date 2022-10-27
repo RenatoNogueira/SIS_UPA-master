@@ -200,9 +200,10 @@
 
   <clr-input-container>
     <label class="p5">Telefone/Celular:*</label>
-    <input clrInput type="text" name="Nacionalidade" size="25" placeholder="(98) 99999-9999">
+    <input clrInput type="tel" name="Telefone" size="25" placeholder="(98) 99999-9999"
+      pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}">
   </clr-input-container>
-  <clr-input-container class="nacionalidade">
+  <clr-input-container class="contato">
     <label class="p3">Tipo de Contato:
     </label>
     <input class="tipo-contato" clrInput type="text" size="25" name="example" />

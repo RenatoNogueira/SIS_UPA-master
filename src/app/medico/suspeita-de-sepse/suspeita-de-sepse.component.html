@@ -40,9 +40,9 @@
       </a>
     </clr-dg-cell>
   </clr-dg-row>
-  <!-- correto -->
+
   <clr-dg-row>
-    <clr-dg-cell *ngFor=" let lista of lista">{{ lista.numeroproto }}</clr-dg-cell>
+    <clr-dg-cell *ngFor=" let lista of lista">{{ lista.numeroProto }}</clr-dg-cell>
     <clr-dg-cell *ngFor=" let lista of lista">{{ lista.paciente }}</clr-dg-cell>
     <clr-dg-cell *ngFor=" let lista of lista">{{ lista.especialidade }}</clr-dg-cell>
     <clr-dg-cell *ngFor=" let lista of lista">{{ lista.situacao }}</clr-dg-cell>
@@ -52,52 +52,6 @@
     <clr-dg-cell>
       <a aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-left" role="tooltip" (click)="basic = true"
         *ngFor=" let lista of lista">
-        <clr-icon class="is-solid" shape="pencil"></clr-icon>
-        <span class="tooltip-content">Visualizar</span>
-      </a>
-    </clr-dg-cell>
-  </clr-dg-row>
-  <!-- -->
-
-  <clr-dg-row>
-    <clr-dg-cell>402208152896</clr-dg-cell>
-    <clr-dg-cell>JOYCE PROTAZIO DA SILVA</clr-dg-cell>
-    <clr-dg-cell>Clínica Médica</clr-dg-cell>
-    <clr-dg-cell>Suspeita de Sepse</clr-dg-cell>
-    <clr-dg-cell><span class="class-risco-azul">Azul</span></clr-dg-cell>
-    <clr-dg-cell>12d 2h 30min</clr-dg-cell>
-    <clr-dg-cell>
-      <a aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-left" role="tooltip" href="#">
-        <clr-icon class="is-solid" shape="pencil"></clr-icon>
-        <span class="tooltip-content">Visualizar</span>
-      </a>
-    </clr-dg-cell>
-  </clr-dg-row>
-
-  <clr-dg-row>
-    <clr-dg-cell>402208150222</clr-dg-cell>
-    <clr-dg-cell>RENATO PEREIRA DA SILVA NOGUEIRA</clr-dg-cell>
-    <clr-dg-cell>Clínica Médica</clr-dg-cell>
-    <clr-dg-cell>Suspeita de Sepse</clr-dg-cell>
-    <clr-dg-cell><span class="class-risco-vermelha">Vermelha</span></clr-dg-cell>
-    <clr-dg-cell>1d 2h 2min</clr-dg-cell>
-    <clr-dg-cell>
-      <a aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-left" role="tooltip" href="#">
-        <clr-icon class="is-solid" shape="pencil"></clr-icon>
-        <span class="tooltip-content">Visualizar</span>
-      </a>
-    </clr-dg-cell>
-  </clr-dg-row>
-
-  <clr-dg-row>
-    <clr-dg-cell>402208125783</clr-dg-cell>
-    <clr-dg-cell>MAURO SERGIO SANTOS SILVA</clr-dg-cell>
-    <clr-dg-cell>Clínica Médica</clr-dg-cell>
-    <clr-dg-cell>Sepse Confirmado</clr-dg-cell>
-    <clr-dg-cell><span class="class-risco-amarela">Amarela</span></clr-dg-cell>
-    <clr-dg-cell>8h 7min</clr-dg-cell>
-    <clr-dg-cell>
-      <a aria-haspopup="true" class="tooltip tooltip-sm tooltip-top-left" role="tooltip" href="#">
         <clr-icon class="is-solid" shape="pencil"></clr-icon>
         <span class="tooltip-content">Visualizar</span>
       </a>
