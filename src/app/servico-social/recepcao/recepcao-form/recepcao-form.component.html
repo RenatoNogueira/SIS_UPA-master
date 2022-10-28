@@ -178,7 +178,7 @@
 
   <clr-select-container>
     <label class="p5">UF:*</label>
-    <select clrSelect name="Ocupação" (ngModel)="Uf">
+    <select clrSelect name="Uf" (ngModel)="Uf">
       <option></option>
       <option value="1" class="ng-star-inserted" *ngFor="let Uf of uf" (ngValue)="Uf">
         {{
@@ -188,7 +188,7 @@
   <clr-select-container class="nacionalidade">
     <label class="p3">Cidade:
     </label>
-    <select clrSelect name="Ocupação" (ngModel)="Cidades" class="cidades">
+    <select clrSelect name="Cidades" (ngModel)="Cidades" class="cidades">
       <option></option>
       <option value="1" class="ng-star-inserted" *ngFor="let Cidades of cidades" (ngValue)="Cidades">
         {{
