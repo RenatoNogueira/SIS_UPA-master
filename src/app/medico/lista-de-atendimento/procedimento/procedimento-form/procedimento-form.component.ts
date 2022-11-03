@@ -51,7 +51,7 @@ export class ProcedimentoFormComponent implements OnInit {
           selected: ClrSelectedState,
         },
         {
-          name: 'Exerese de Tumor de Pele e Anexos',
+          name: 'Exérese de Tumor de Pele e Anexos',
           selected: ClrSelectedState,
         },
         {
