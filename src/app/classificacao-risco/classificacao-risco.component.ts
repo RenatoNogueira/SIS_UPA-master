@@ -92,7 +92,7 @@ export class ClassificacaoRiscoComponent implements OnInit {
       this.checks = false;
     }
   }
-
+  // *****************************************************  //
   disabled = true;
   button(e: any) {
     if (e.target.disabled == false) {

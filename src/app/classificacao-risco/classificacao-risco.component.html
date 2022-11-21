@@ -25,7 +25,7 @@
 
   <clr-input-container>
     <label class="p3">Nome ou Nome Social:*</label>
-    <input clrInput type="text" size="60" name="example" placeholder="Nome ou Nome Social" />
+    <input class="label-social" clrInput type="text" name="example" placeholder="Nome ou Nome Social" />
   </clr-input-container>
 
   <clr-checkbox-container clrInline>
@@ -38,12 +38,12 @@
 
 <form clrForm>
   <label></label>
-  <clr-checkbox-container clrInline>
+  <clr-checkbox-container>
     <label class="p3">Atendimento</label>
     <clr-checkbox-wrapper>
       <input type="checkbox" clrCheckbox name="options1" value="option1" (click)="mostraEmergencia()"
         (change)="emergenciaSelect($event); button($event); buttonEmergencia($event)" [disabled]="disabledeSoc" />
-      <label><span class="color_emergencia">Emergência</span></label>
+      <label><span>Emergência<br><br></span></label>
     </clr-checkbox-wrapper>
     <clr-checkbox-wrapper>
       <input type="checkbox" clrCheckbox name="servico-social" value="option1" (click)="mostraEmergencia()"
@@ -132,16 +132,16 @@
     </clr-checkbox-wrapper>
     <clr-checkbox-wrapper>
       <input type="checkbox" clrCheckbox name="doencasrenaiscronicas" value="doencasrenaiscronicas" />
+      <label>Doenças Cardiacas</label>
+    </clr-checkbox-wrapper>
+    <clr-checkbox-wrapper>
+      <input type="checkbox" clrCheckbox name="doencasrenaiscronicas" value="doencasrenaiscronicas" />
       <label>Doenças Renais Crônicas</label>
     </clr-checkbox-wrapper>
   </clr-checkbox-container>
 
   <clr-checkbox-container clrInline>
     <label></label>
-    <clr-checkbox-wrapper>
-      <input type="checkbox" clrCheckbox name="doencasrenaiscronicas" value="doencasrenaiscronicas" />
-      <label>Doenças Renais Crônicas</label>
-    </clr-checkbox-wrapper>
     <clr-checkbox-wrapper>
       <input type="checkbox" clrCheckbox name="doencasrespcronicas" value="doencasrespcronicas" />
       <label>Doenças Respiratórias Crônicas</label>
@@ -150,11 +150,17 @@
       <input type="checkbox" clrCheckbox name="hipertensao" value="hipertensao" />
       <label>Hipertensão</label>
     </clr-checkbox-wrapper>
+  </clr-checkbox-container>
+  <clr-checkbox-container clrInline>
+    <label></label>
     <clr-checkbox-wrapper>
       <input (click)="outras()" type="checkbox" clrCheckbox name="outros" value="outros" />
       <label>Outras Doenças</label>
     </clr-checkbox-wrapper>
   </clr-checkbox-container>
+
+
+
   <clr-textarea-container>
     <label></label>
     <textarea *ngIf="outrasDoencas" clrTextarea name="description" rows="5" style="width: 74%"
@@ -197,54 +203,51 @@
   </clr-textarea-container><br />
 </form>
 
-<form clrForm *ngIf="emergencia">
-  <label></label>
-  <clr-checkbox-container clrInline>
-    <label class="p3-font">Escala de Glasgow:</label>
-  </clr-checkbox-container>
-  <hr />
-  <clr-select-container>
-    <label class="p3">Abertura ocular:*</label>
-    <select clrSelect name="AberturaOcular" (ngModel)="AberturaOcular">
-      <option></option>
-      <option value="1" class="ng-star-inserted" *ngFor="let AberturaOcular of aberturaOcular"
-        (ngValue)="AberturaOcular">{{ AberturaOcular }}</option>
-    </select>
-  </clr-select-container>
+<section *ngIf="emergencia">
+  <label>Escala de Glasgow:</label>
+  <form clrForm style="margin: -60px 1em 0 276px">
+    <clr-select-container>
+      <label class="p3">Abertura ocular:*</label>
+      <select clrSelect name="AberturaOcular" (ngModel)="AberturaOcular">
+        <option></option>
+        <option value="1" class="ng-star-inserted" *ngFor="let AberturaOcular of aberturaOcular"
+          (ngValue)="AberturaOcular">{{ AberturaOcular }}</option>
+      </select>
+    </clr-select-container>
 
-  <clr-select-container>
-    <label class="p3">Resposta verbal:*</label>
-    <select clrSelect name="RespostaVerbal" (ngModel)="RespostaVerbal">
-      <option>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</option>
-      <option value="1" class="ng-star-inserted" *ngFor="let RespostaVerbal of respostaVerbal"
-        (ngValue)="RespostaVerbal">{{
-        RespostaVerbal }}</option>
-    </select>
+    <clr-select-container>
+      <label class="p3">Resposta verbal:*</label>
+      <select clrSelect name="RespostaVerbal" (ngModel)="RespostaVerbal">
+        <option>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</option>
+        <option value="1" class="ng-star-inserted" *ngFor="let RespostaVerbal of respostaVerbal"
+          (ngValue)="RespostaVerbal">{{
+          RespostaVerbal }}</option>
+      </select>
 
-  </clr-select-container>
-  <clr-select-container>
-    <label class="p3">Resposta motora:*</label>
-    <select clrSelect name="RespostaMotora" (ngModel)="RespostaMotora">
-      <option>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</option>
-      <option value="1" class="ng-star-inserted" *ngFor="let RespostaMotora of respostaMotora"
-        (ngValue)="RespostaMotora">{{
-        RespostaMotora }}</option>
-    </select>
-  </clr-select-container>
-</form>
-
+    </clr-select-container>
+    <clr-select-container>
+      <label class="p3">Resposta motora:*</label>
+      <select clrSelect name="RespostaMotora" (ngModel)="RespostaMotora">
+        <option>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</option>
+        <option value="1" class="ng-star-inserted" *ngFor="let RespostaMotora of respostaMotora"
+          (ngValue)="RespostaMotora">{{
+          RespostaMotora }}</option>
+      </select>
+    </clr-select-container>
+  </form>
+</section>
 <br>
 
 <section class="escala-glasgow" *ngIf="emergencia">
   <label></label>
   <label class="p2">Escala de Coma Glasgow: /15</label>
 </section>
-
+<br><br>
 <app-sinais-vitais *ngIf="emergencia"></app-sinais-vitais>
 
 <br>
 
-<form class="clr-control-inline" style="margin: 2px 1em 0 276px" *ngIf="emergencia">
+<form class="clr-control-inline" style="margin: 2px 1em 0 250px" *ngIf="emergencia">
   <label></label>
   <label><b>Suspeita de SEPSE?&nbsp;&nbsp;</b></label>
   <div class="clr-control-inline">

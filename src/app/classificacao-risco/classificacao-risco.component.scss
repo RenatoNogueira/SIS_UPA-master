@@ -1,3 +1,4 @@
+/* Fade de alertas caso use */
 .fadeIn {
   -webkit-animation: fadeIn 1s ease-in-out;
   -moz-animation: fadeIn 1s ease-in-out;
@@ -45,31 +46,35 @@
   }
 }
 
-.color_emergencia {
-  border-top: 2px solid #d60505;
-  border-bottom: 2px solid #d60505;
-  border-radius: 10px 10px 10px 10px;
-  padding: 2px;
-  margin-top: -9px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
+/* ----------------------------------------------------------------------------- */
 
+/* modificação no campo nome ou nome social */
 .social-name {
   margin-left: 55%;
   top: -50px;
 }
 
-@media only screen and (max-width: 1458px) {
+.label-social {
+  display: flex;
+  width: 34%;
+}
+
+@media only screen and (min-device-width: 1340px) and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio: 2) {
   .social-name {
     margin-left: 68%;
   }
 }
 
+/* ----------------------------------------------------------------------------- */
+
+/* Escala de Glasgow */
 .escala-glasgow {
   margin-left: 18%;
 }
 
+/* ----------------------------------------------------------------------------- */
+
+/* Opção Radio Button da classicifação | VERMELHA / AMARELA / VERDE / AZUL | */
 clr-radio-container,
 .center {
   width: auto;
@@ -80,7 +85,7 @@ clr-radio-container,
   align-items: center;
 }
 
-/* Chrome e outros esconde scroll CPF*/
+/* Chrome e outros esconde scroll CPF */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -93,7 +98,7 @@ input[type=number] {
 }
 
 
-/* input cor classificação de risco BUTTON INPUT*/
+/* input cor classificação de risco BUTTON INPUT */
 .input-verm[type=radio]+label::before {
   content: '';
   position: absolute;

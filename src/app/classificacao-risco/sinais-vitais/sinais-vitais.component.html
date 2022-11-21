@@ -1,8 +1,6 @@
-<form>
-  <section class="form-block p1" *ngIf="emergencia">
-    <label class="p3-font">Sinais Vitais:</label>
-    <hr>
-    <br>
+<form><label class="p3-font">Sinais Vitais:</label>
+  <section class="form-block p1" *ngIf="emergencia" style="margin: -30px 1em 0 60px">
+
     <div class="form-group">
       <label></label>
       <label class="p1" for="peso_aproximado">Temperatura*</label>
@@ -51,8 +49,8 @@
           </option>
         </select>
       </div>
-      <label for="frequencia_respiratoria" class="p1">Oligúria(≤0,5ml/kg/h)*</label>
 
+      <label for="frequencia_respiratoria" class="p1">Oligúria(≤0,5ml/kg/h)*</label>
       <clr-checkbox-wrapper clrInline>
         <input type="checkbox" clrCheckbox name="options1" value="option1" />
         <label>Sim &nbsp; &nbsp;</label>
@@ -62,12 +60,14 @@
         <label>Não</label>
       </clr-checkbox-wrapper>
     </div>
+
   </section>
 
-  <section class="form-block p1" formGroupName="Avaliacao" *ngIf="emergencia">
-    <div class="form-group">
-      <label class="p1">Outros Dados:</label>
+  <label class="p1">Outros Dados:</label>
+  <section class="form-block p1" formGroupName="Avaliacao" *ngIf="emergencia" style="margin: -30px 1em 0 60px">
 
+    <div class="form-group">
+      <label></label>
       <label class="p1" for="peso_aproximado">HGT</label>
       <input type="text" placeholder="mg/dl" id="peso_aproximado" size="8" formControlName="peso_aproximado" />
       <span>
@@ -80,7 +80,8 @@
       </span>
     </div>
   </section>
-  <section class="form-block" *ngIf="emergencia">
+
+  <section class="form-block" *ngIf="emergencia" style="margin: 0 1em 0 300px">
     <div class="form-group">
       <label></label>
       <span class="label label-danger p1">
@@ -89,4 +90,5 @@
       </span>
     </div>
   </section>
+
 </form>
