@@ -37,7 +37,6 @@
 </form>
 
 <form clrForm>
-  <label></label>
   <clr-checkbox-container>
     <label class="p3">Atendimento:*</label>
     <clr-checkbox-wrapper>
@@ -76,7 +75,27 @@
   <br>
   <hr />
 </form>
-<br>
+
+
+
+<form clrForm *ngIf="emergencia">
+  <clr-checkbox-container clrInline>
+    <label></label>
+    <clr-checkbox-wrapper>
+      <input type="checkbox" clrCheckbox name="sultura" value="sultura" />
+      <label>Sutura</label>
+    </clr-checkbox-wrapper>
+    <!--
+      <clr-checkbox-wrapper>
+        <input type="checkbox" clrCheckbox name="sultura-n" value="sultura-n" />
+        <label>Não</label>
+      </clr-checkbox-wrapper>-->
+  </clr-checkbox-container>
+</form>
+
+
+
+
 
 <form clrForm>
   <clr-select-container>
@@ -97,7 +116,7 @@
 
 <form clrForm *ngIf="emergencia">
   <clr-checkbox-container clrInline>
-    <label class="p3">Sintomas de sídrome gripal?*</label>
+    <label class="p3">Sintomas de sídrome gripal?</label>
     <clr-checkbox-wrapper>
       <input type="checkbox" clrCheckbox name="s-gripal" value="s-gripal" />
       <label>Sim</label>
@@ -107,21 +126,22 @@
       <label>Não</label>
     </clr-checkbox-wrapper>
   </clr-checkbox-container>
-
+  <!--
   <clr-checkbox-container clrInline>
-    <label class="p3">Sultura?*</label>
+    <label class="p3"></label>
     <clr-checkbox-wrapper>
       <input type="checkbox" clrCheckbox name="sultura" value="sultura" />
-      <label>Sim</label>
+      <label>Sutura</label>
     </clr-checkbox-wrapper>
+
     <clr-checkbox-wrapper>
       <input type="checkbox" clrCheckbox name="sultura-n" value="sultura-n" />
       <label>Não</label>
     </clr-checkbox-wrapper>
-  </clr-checkbox-container>
+  </clr-checkbox-container>-->
 
   <clr-checkbox-container clrInline>
-    <label class="p3">Doenças Preexistentes:*</label>
+    <label class="p3">Doenças Preexistentes:</label>
     <clr-checkbox-wrapper>
       <input type="checkbox" clrCheckbox name="cancer" value="cancer" />
       <label>Câncer</label>
@@ -155,7 +175,7 @@
     <label></label>
     <clr-checkbox-wrapper>
       <input (click)="outras()" type="checkbox" clrCheckbox name="outros" value="outros" />
-      <label>Outras Doenças</label>
+      <label>Outras Doenças*</label>
     </clr-checkbox-wrapper>
   </clr-checkbox-container>
 
@@ -205,7 +225,7 @@
 
 <section *ngIf="emergencia">
   <label>Escala de Glasgow:</label>
-  <form clrForm style="margin: -60px 1em 0 276px">
+  <form clrForm style="margin: -60px 1em 0 270px">
     <clr-select-container>
       <label class="p3">Abertura ocular:*</label>
       <select clrSelect name="AberturaOcular" (ngModel)="AberturaOcular">
@@ -247,7 +267,7 @@
 
 <br>
 
-<form class="clr-control-inline" style="margin: 2px 1em 0 250px" *ngIf="emergencia">
+<form class="clr-control-inline" style="margin: 2px 1em 0 275px" *ngIf="emergencia">
   <label></label>
   <label><b>Suspeita de SEPSE?&nbsp;&nbsp;</b></label>
   <div class="clr-control-inline">
@@ -267,7 +287,7 @@
 <section>
   <label class="p3-font">Outras Informações:</label>
   <form clrForm>
-    <clr-textarea-container style="margin: -30px 0 0 -10px">
+    <clr-textarea-container style="margin: -30px 0 0 -11px">
       <label></label>
       <textarea clrTextarea name="description" rows="5" style="width: 74%" placeholder="Outras Informações"></textarea>
     </clr-textarea-container>
