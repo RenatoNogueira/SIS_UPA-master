@@ -39,7 +39,7 @@
 <form clrForm>
   <label></label>
   <clr-checkbox-container>
-    <label class="p3">Atendimento</label>
+    <label class="p3">Atendimento:*</label>
     <clr-checkbox-wrapper>
       <input type="checkbox" clrCheckbox name="options1" value="option1" (click)="mostraEmergencia()"
         (change)="emergenciaSelect($event); button($event); buttonEmergencia($event)" [disabled]="disabledeSoc" />
@@ -55,7 +55,7 @@
 <form clrForm>
   <label></label>
   <clr-checkbox-container clrInline>
-    <label class="p3">Especialidade para Atendimento *</label>
+    <label class="p3">Especialidade para Atendimento:*</label>
     <clr-checkbox-wrapper>
       <input type="checkbox" clrCheckbox name="options1" value="option1" />
       <label>Clínica Médica</label>
@@ -90,14 +90,14 @@
 
 <form clrForm>
   <clr-textarea-container>
-    <label class="p3">Queixa *</label>
+    <label class="p3">Queixa:*</label>
     <textarea clrTextarea name="description" rows="5" style="width: 74%" placeholder="Queixa"></textarea>
   </clr-textarea-container>
 </form>
 
 <form clrForm *ngIf="emergencia">
   <clr-checkbox-container clrInline>
-    <label class="p3">Sintomas de sídrome gripal?</label>
+    <label class="p3">Sintomas de sídrome gripal?*</label>
     <clr-checkbox-wrapper>
       <input type="checkbox" clrCheckbox name="s-gripal" value="s-gripal" />
       <label>Sim</label>
@@ -109,7 +109,7 @@
   </clr-checkbox-container>
 
   <clr-checkbox-container clrInline>
-    <label class="p3">Sultura?</label>
+    <label class="p3">Sultura?*</label>
     <clr-checkbox-wrapper>
       <input type="checkbox" clrCheckbox name="sultura" value="sultura" />
       <label>Sim</label>
@@ -124,7 +124,7 @@
     <label class="p3">Doenças Preexistentes:*</label>
     <clr-checkbox-wrapper>
       <input type="checkbox" clrCheckbox name="cancer" value="cancer" />
-      <label>Cancer</label>
+      <label>Câncer</label>
     </clr-checkbox-wrapper>
     <clr-checkbox-wrapper>
       <input type="checkbox" clrCheckbox name="diabetes" value="diabetes" />
@@ -132,7 +132,7 @@
     </clr-checkbox-wrapper>
     <clr-checkbox-wrapper>
       <input type="checkbox" clrCheckbox name="doencasrenaiscronicas" value="doencasrenaiscronicas" />
-      <label>Doenças Cardiacas</label>
+      <label>Doenças Cardíacas</label>
     </clr-checkbox-wrapper>
     <clr-checkbox-wrapper>
       <input type="checkbox" clrCheckbox name="doencasrenaiscronicas" value="doencasrenaiscronicas" />
@@ -266,9 +266,8 @@
 <br><br>
 <section>
   <label class="p3-font">Outras Informações:</label>
-  <hr />
   <form clrForm>
-    <clr-textarea-container>
+    <clr-textarea-container style="margin: -30px 0 0 -10px">
       <label></label>
       <textarea clrTextarea name="description" rows="5" style="width: 74%" placeholder="Outras Informações"></textarea>
     </clr-textarea-container>

@@ -23,6 +23,7 @@
     "@clr/icons": "^13.0.2",
     "@clr/ui": "^13.8.0",
     "@ng-select/ng-select": "^9.0.2",
+    "angular-cli-ghpages": "^1.0.5",
     "devextreme-angular": "^22.1.5",
     "estados-br": "^0.0.5",
     "ng-notification": "^0.0.4",
