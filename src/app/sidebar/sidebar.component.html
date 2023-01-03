@@ -5,12 +5,39 @@
         <clr-icon shape="home" clrVerticalNavIcon></clr-icon>
         Início
       </a>
+      <clr-vertical-nav-group>
+        <clr-icon shape="certificate" clrVerticalNavIcon></clr-icon>
+        Recepção
+        <clr-vertical-nav-group-children>
+          <a clrVerticalNavLink routerLink="../recepcao-form" routerLinkActive="active">
+            Lista da Recepção
+          </a>
+          <a clrVerticalNavLink routerLink="../medicacao" routerLinkActive="active">
+            Lista para Atendimento
+          </a>
+          <a clrVerticalNavLink routerLink="../exame" routerLinkActive="active">
+            Lista de Retorno
+          </a>
+        </clr-vertical-nav-group-children>
+      </clr-vertical-nav-group>
 
+      <clr-vertical-nav-group>
+        <clr-icon shape="certificate" clrVerticalNavIcon></clr-icon>
+        Paciente
+        <clr-vertical-nav-group-children>
+          <a clrVerticalNavLink routerLink="../exame" routerLinkActive="active">
+            Lista Pacientes
+          </a>
+        </clr-vertical-nav-group-children>
+      </clr-vertical-nav-group>
+
+      <!--
       <a clrVerticalNavLink routerLinkActive="active" routerLink="./classificacao-risco">
         <clr-icon shape="switch" clrVerticalNavIcon></clr-icon>
         Classificação de Risco
       </a>
-
+-->
+      <!--
       <clr-vertical-nav-group>
         <clr-icon shape="clipboard" clrVerticalNavIcon></clr-icon>
         Enfermagem
@@ -21,13 +48,13 @@
           <a clrVerticalNavLink routerLink="../medicacao" routerLinkActive="active">
             Paciente para Exame
           </a>
-          <!--
+
           <a clrVerticalNavLink routerLink="../exame" routerLinkActive="active">
             Exame
-          </a>-->
+          </a>
         </clr-vertical-nav-group-children>
       </clr-vertical-nav-group>
-
+-->
 
       <!--
       <clr-vertical-nav-group>
@@ -50,6 +77,7 @@
       </clr-vertical-nav-group>
     -->
 
+      <!--
       <a clrVerticalNavLink routerLinkActive="active" routerLink="#@">
         <clr-icon shape="warning-standard" clrVerticalNavIcon></clr-icon>
         Sala de Observação
@@ -59,7 +87,7 @@
         <clr-icon shape="user" clrVerticalNavIcon></clr-icon>
         Relação de Pacientes
       </a>
-
+-->
 
       <!--
       <clr-vertical-nav-group>

@@ -3,24 +3,24 @@
 
     <div class="form-group">
       <label></label>
-      <label class="p1" for="peso_aproximado">Temperatura*</label>
+      <label class="p1" for="peso_aproximado">Temperatura<span class="req">*</span></label>
       <input mask="0*,000" type="text" placeholder="°C" id="peso_aproximado" size="8"
         formControlName="peso_aproximado" />
       <span>
         <small>°C</small>
       </span>
-      <label for="pressao_art" class="p1">Pressão Arterial*</label>
+      <label for="pressao_art" class="p1">Pressão Arterial<span class="req">*</span></label>
       <input mask="000/000" dropSpecialCharacters="false" type="text" placeholder="mmHg" id="pressao_art" size="6"
         formControlName="pressao_art" />
       <span>
         <small>mmHg</small>
       </span>
-      <label for="pulso" class="p1">Pulso*</label>
+      <label for="pulso" class="p1">Pulso<span class="req">*</span></label>
       <input mask="000" type="text" placeholder="bmp" id="pulso" size="3" formControlName="pulso" />
       <span>
         <small>bpm</small>
       </span>
-      <label for="sato" class="p1">SpO²*</label>
+      <label for="sato" class="p1">SpO²<span class="req">*</span></label>
       <input mask="000" type="text" placeholder="%" id="sato" size="3" formControlName="sato" />
       <span>
         <small>%</small>
@@ -35,13 +35,13 @@
       <span>
         <small>SPO²</small>
       </span> -->
-      <label for="frequencia_respiratoria" class="p1">Frequência Respiratória*</label>
+      <label for="frequencia_respiratoria" class="p1">Frequência Respiratória<span class="req">*</span></label>
       <input autocomplete="off" mask="00" type="text" placeholder="mpm" id="frequencia_respiratoria" size="2"
         formControlName="frequencia_respiratoria" />
       <span>
         <small>rpm</small>
       </span>
-      <label for="nivel_consciencia" class="p1">Nível de Consciência*</label>
+      <label for="nivel_consciencia" class="p1">Nível de Consciência<span class="req">*</span></label>
       <div class="select">
         <select id="nivel_consciencia" formControlName="nivel_consciencia" name="NivelConciencia"
           (ngModel)="NivelConciencia">
@@ -51,7 +51,7 @@
         </select>
       </div>
 
-      <label for="frequencia_respiratoria" class="p1">Oligúria(≤0,5ml/kg/h)*</label>
+      <label for="frequencia_respiratoria" class="p1">Oligúria(≤0,5ml/kg/h)<span class="req">*</span></label>
       <clr-checkbox-wrapper clrInline>
         <input type="checkbox" clrCheckbox name="options1" value="option1" />
         <label>Sim &nbsp; &nbsp;</label>

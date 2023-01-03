@@ -1,3 +1,20 @@
+html,
+body {
+  height: 100%;
+  overflow: hidden
+}
+
+.req {
+  content: '\2733';
+  color: rgb(255, 0, 0);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+*:required {
+  background-color: gold;
+}
+
 /* Evita selecionar os texto dos campos do aplicativo */
 span,
 button,
@@ -63,11 +80,4 @@ hr,
   color: rgb(93, 93, 93);
   font-size: .8rem;
   font-weight: 400;
-}
-
-
-html,
-body {
-  height: 100%;
-  overflow: hidden
 }

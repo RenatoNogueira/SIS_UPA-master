@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recepcao-form.component.scss'],
 })
 export class RecepcaoFormComponent implements OnInit {
+  faltadeDoc = false;
+  faltaDocumentacao(): void {
+    this.faltadeDoc = !this.faltadeDoc;
+  }
   sexo: string[] = ['Masculino', 'Feminino'];
   Sexo: string = 'Masculino';
   corRaca: string[] = ['Branca', 'Preta', 'Amarela', 'Parda', 'Indígena'];
@@ -175,6 +179,17 @@ export class RecepcaoFormComponent implements OnInit {
     'Cidade 7',
   ];
   Cidades: string = 'AC - Acre';
+
+  tipoDeContato: string[] = [
+    '******************',
+    '******************',
+    '******************',
+    '******************',
+    '******************',
+    '******************',
+  ];
+  TipoDeContato: string = 'Avenida';
+
   constructor() {}
   ngOnInit(): void {}
 }

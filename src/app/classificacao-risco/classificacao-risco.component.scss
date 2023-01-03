@@ -94,7 +94,7 @@ input::-webkit-inner-spin-button {
 
 /* Firefox esconde scroll CPF*/
 input[type=number] {
-  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 
